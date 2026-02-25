@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;600;700&display=swap');
+
+:root {
+  --color-bg: #0f0f1a;
+  --color-surface: #1a1a2e;
+  --color-accent: #e94560;
+  --color-accent2: #0f3460;
+  --color-text: #eaeaea;
+  --color-muted: #8892a4;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Noto Sans Ethiopic', system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+.fidel-char {
+  font-family: 'Noto Sans Ethiopic', system-ui, sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1.2;
+}
