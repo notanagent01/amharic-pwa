@@ -7,6 +7,9 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
+      strategies: 'injectManifest',
+      srcDir: 'src/workers',
+      filename: 'sw.ts',
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'audio/**/*'],
       manifest: {
@@ -21,15 +24,8 @@ export default defineConfig({
           { src: '/icon-512.png', sizes: '512x512', type: 'image/png' }
         ]
       },
-      workbox: {
+      injectManifest: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webm,wasm}'],
-        runtimeCaching: [
-          {
-            urlPattern: /\/audio\//,
-            handler: 'CacheFirst',
-            options: { cacheName: 'audio-cache', expiration: { maxEntries: 500 } }
-          }
-        ]
       }
     })
   ],
