@@ -1,0 +1,2101 @@
+[
+  {
+    "id": "gram_001",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "reorder",
+    "lesson": "SOV word order",
+    "instruction": "Arrange the words to form a correct Amharic sentence.",
+    "tags": [
+      "sov"
+    ],
+    "words": [
+      {
+        "amharic": "ተማሪው",
+        "english": "the student",
+        "transliteration": "temariyu"
+      },
+      {
+        "amharic": "መጽሐፉን",
+        "english": "the book [obj]",
+        "transliteration": "metshafun"
+      },
+      {
+        "amharic": "አነበበ",
+        "english": "read",
+        "transliteration": "anebebe"
+      }
+    ],
+    "correct_order": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Amharic prefers Subject-Object-Verb. The object carries -n or -un."
+  },
+  {
+    "id": "gram_002",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "reorder",
+    "lesson": "SOV word order",
+    "instruction": "Arrange the words to form a correct Amharic sentence.",
+    "tags": [
+      "sov"
+    ],
+    "words": [
+      {
+        "amharic": "እኔ",
+        "english": "I",
+        "transliteration": "ene"
+      },
+      {
+        "amharic": "ቡናውን",
+        "english": "the coffee [obj]",
+        "transliteration": "bunnawun"
+      },
+      {
+        "amharic": "ጠጣሁ",
+        "english": "drank",
+        "transliteration": "tettahu"
+      }
+    ],
+    "correct_order": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Place the finite verb at the end in simple clauses."
+  },
+  {
+    "id": "gram_003",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "reorder",
+    "lesson": "SOV word order",
+    "instruction": "Arrange the words to form a correct Amharic sentence.",
+    "tags": [
+      "sov"
+    ],
+    "words": [
+      {
+        "amharic": "ሴቲቱ",
+        "english": "the woman",
+        "transliteration": "setitu"
+      },
+      {
+        "amharic": "ገበያውን",
+        "english": "the market [obj]",
+        "transliteration": "gebeyawun"
+      },
+      {
+        "amharic": "ጎበኘች",
+        "english": "visited",
+        "transliteration": "gobenyech"
+      }
+    ],
+    "correct_order": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "SOV is stable across person and gender in the perfect tense."
+  },
+  {
+    "id": "gram_004",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "reorder",
+    "lesson": "SOV word order",
+    "instruction": "Arrange the words to form a correct Amharic sentence.",
+    "tags": [
+      "sov"
+    ],
+    "words": [
+      {
+        "amharic": "ልጆቹ",
+        "english": "the children",
+        "transliteration": "lijjochchu"
+      },
+      {
+        "amharic": "እንጀራውን",
+        "english": "the injera [obj]",
+        "transliteration": "enjjerawun"
+      },
+      {
+        "amharic": "በሉ",
+        "english": "ate",
+        "transliteration": "belu"
+      }
+    ],
+    "correct_order": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Plural subjects still keep object before verb."
+  },
+  {
+    "id": "gram_005",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "reorder",
+    "lesson": "SOV word order",
+    "instruction": "Arrange the words to form a correct Amharic sentence.",
+    "tags": [
+      "sov"
+    ],
+    "words": [
+      {
+        "amharic": "እኛ",
+        "english": "we",
+        "transliteration": "enya"
+      },
+      {
+        "amharic": "ታክሲውን",
+        "english": "the taxi [obj]",
+        "transliteration": "taksiwun"
+      },
+      {
+        "amharic": "ያዝን",
+        "english": "took",
+        "transliteration": "yazn"
+      }
+    ],
+    "correct_order": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Subject first, object marked, verb last."
+  },
+  {
+    "id": "gram_006",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "reorder",
+    "lesson": "SOV word order",
+    "instruction": "Arrange the words to form a correct Amharic sentence.",
+    "tags": [
+      "sov"
+    ],
+    "words": [
+      {
+        "amharic": "አንቺ",
+        "english": "you (f)",
+        "transliteration": "anchi"
+      },
+      {
+        "amharic": "ደብዳቤውን",
+        "english": "the letter [obj]",
+        "transliteration": "debdabeyawun"
+      },
+      {
+        "amharic": "ጻፍሽ",
+        "english": "wrote",
+        "transliteration": "tsaffish"
+      }
+    ],
+    "correct_order": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "2sg feminine keeps the same clause order; only verb ending changes."
+  },
+  {
+    "id": "gram_007",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "reorder",
+    "lesson": "Accusative marker -n/-in",
+    "instruction": "Arrange the words to form a correct sentence with a marked object.",
+    "tags": [
+      "accusative"
+    ],
+    "words": [
+      {
+        "amharic": "እሱ",
+        "english": "he",
+        "transliteration": "esu"
+      },
+      {
+        "amharic": "ቤቱን",
+        "english": "the house [obj]",
+        "transliteration": "betun"
+      },
+      {
+        "amharic": "አየ",
+        "english": "saw",
+        "transliteration": "aye"
+      }
+    ],
+    "correct_order": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Definite masculine noun + accusative becomes -un, as in betun."
+  },
+  {
+    "id": "gram_008",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "reorder",
+    "lesson": "Accusative marker -n/-in",
+    "instruction": "Arrange the words to form a correct sentence with a marked object.",
+    "tags": [
+      "accusative"
+    ],
+    "words": [
+      {
+        "amharic": "እኔ",
+        "english": "I",
+        "transliteration": "ene"
+      },
+      {
+        "amharic": "ቡናን",
+        "english": "coffee [obj]",
+        "transliteration": "bunnan"
+      },
+      {
+        "amharic": "አዘዝኩ",
+        "english": "ordered",
+        "transliteration": "azzezku"
+      }
+    ],
+    "correct_order": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Vowel-final nouns take -n directly in the accusative."
+  },
+  {
+    "id": "gram_009",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "reorder",
+    "lesson": "Definite suffixes",
+    "instruction": "Arrange the words to form a correct sentence.",
+    "tags": [
+      "definite"
+    ],
+    "words": [
+      {
+        "amharic": "ቤቱ",
+        "english": "the house",
+        "transliteration": "betu"
+      },
+      {
+        "amharic": "ትልቅ",
+        "english": "big",
+        "transliteration": "tilik"
+      },
+      {
+        "amharic": "ነው",
+        "english": "is",
+        "transliteration": "new"
+      }
+    ],
+    "correct_order": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Consonant-final masculine nouns take -u for definiteness."
+  },
+  {
+    "id": "gram_010",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "reorder",
+    "lesson": "Definite suffixes",
+    "instruction": "Arrange the words to form a correct sentence.",
+    "tags": [
+      "definite"
+    ],
+    "words": [
+      {
+        "amharic": "መኪናዋ",
+        "english": "her/the car",
+        "transliteration": "mekinawa"
+      },
+      {
+        "amharic": "ፈጣን",
+        "english": "fast",
+        "transliteration": "fetan"
+      },
+      {
+        "amharic": "ናት",
+        "english": "is (f)",
+        "transliteration": "nat"
+      }
+    ],
+    "correct_order": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Feminine forms frequently use -wa with vowel-final bases."
+  },
+  {
+    "id": "gram_011",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "reorder",
+    "lesson": "Adjective + noun definiteness",
+    "instruction": "Arrange the words to form a correct sentence.",
+    "tags": [
+      "adjective_definite"
+    ],
+    "words": [
+      {
+        "amharic": "ቀዩ",
+        "english": "the red",
+        "transliteration": "qeyyu"
+      },
+      {
+        "amharic": "መኪና",
+        "english": "car",
+        "transliteration": "mekina"
+      },
+      {
+        "amharic": "መጣች",
+        "english": "arrived",
+        "transliteration": "mettach"
+      }
+    ],
+    "correct_order": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Adjectives precede nouns; definiteness appears on the adjective."
+  },
+  {
+    "id": "gram_012",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "reorder",
+    "lesson": "Adjective + noun definiteness",
+    "instruction": "Arrange the words to form a correct sentence.",
+    "tags": [
+      "adjective_definite"
+    ],
+    "words": [
+      {
+        "amharic": "ጥቁሩ",
+        "english": "the black",
+        "transliteration": "tiquru"
+      },
+      {
+        "amharic": "ውሻ",
+        "english": "dog",
+        "transliteration": "wusha"
+      },
+      {
+        "amharic": "ተኛ",
+        "english": "slept",
+        "transliteration": "tenya"
+      }
+    ],
+    "correct_order": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Word order is adjective + noun before the final verb."
+  },
+  {
+    "id": "gram_013",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "reorder",
+    "lesson": "Verb conjugation (perfect)",
+    "instruction": "Arrange the words to form a correct sentence.",
+    "tags": [
+      "verb_conjugation"
+    ],
+    "words": [
+      {
+        "amharic": "እኔ",
+        "english": "I",
+        "transliteration": "ene"
+      },
+      {
+        "amharic": "ደብዳቤውን",
+        "english": "the letter [obj]",
+        "transliteration": "debdabeyawun"
+      },
+      {
+        "amharic": "ጻፍኩ",
+        "english": "wrote",
+        "transliteration": "tsaffiku"
+      }
+    ],
+    "correct_order": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "1sg perfect keeps final verb with person suffix."
+  },
+  {
+    "id": "gram_014",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "reorder",
+    "lesson": "Plural -och",
+    "instruction": "Arrange the words to form a correct sentence.",
+    "tags": [
+      "plural"
+    ],
+    "words": [
+      {
+        "amharic": "ሰዎች",
+        "english": "people",
+        "transliteration": "sewoch"
+      },
+      {
+        "amharic": "ቡና",
+        "english": "coffee",
+        "transliteration": "bunna"
+      },
+      {
+        "amharic": "ጠጡ",
+        "english": "drank",
+        "transliteration": "tettu"
+      }
+    ],
+    "correct_order": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "The plural suffix -och marks countable nouns."
+  },
+  {
+    "id": "gram_015",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "reorder",
+    "lesson": "Ejective consonants",
+    "instruction": "Arrange the words to form a correct sentence.",
+    "tags": [
+      "ejective"
+    ],
+    "words": [
+      {
+        "amharic": "ጥቁሩ",
+        "english": "the black",
+        "transliteration": "t'iquru"
+      },
+      {
+        "amharic": "ቀለም",
+        "english": "color",
+        "transliteration": "q'elem"
+      },
+      {
+        "amharic": "ይበራል",
+        "english": "shines",
+        "transliteration": "yiberal"
+      }
+    ],
+    "correct_order": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Ejective consonants must be distinguished in transliteration."
+  },
+  {
+    "id": "gram_016",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "reorder",
+    "lesson": "SOV review",
+    "instruction": "Arrange the words to form a correct sentence.",
+    "tags": [
+      "sov"
+    ],
+    "words": [
+      {
+        "amharic": "እኛ",
+        "english": "we",
+        "transliteration": "enya"
+      },
+      {
+        "amharic": "ፖስታ ቤቱን",
+        "english": "the post office [obj]",
+        "transliteration": "posta betun"
+      },
+      {
+        "amharic": "አገኘን",
+        "english": "found",
+        "transliteration": "agenyen"
+      }
+    ],
+    "correct_order": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Core clause order remains SOV in simple perfect sentences."
+  },
+  {
+    "id": "gram_017",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Perfect tense conjugation",
+    "instruction": "Choose the correct 'to come' form for 1sg.",
+    "tags": [
+      "verb_conjugation"
+    ],
+    "sentence_amharic": "እኔ ትላንት ____።",
+    "sentence_english": "I ____ yesterday.",
+    "sentence_transliteration": "ene telant ____",
+    "options": [
+      {
+        "amharic": "መጣሁ",
+        "transliteration": "mettahu",
+        "english": "came"
+      },
+      {
+        "amharic": "መጣሁ",
+        "transliteration": "mettahu",
+        "english": "came (1sg)"
+      },
+      {
+        "amharic": "መጣህ",
+        "transliteration": "mettah",
+        "english": "came (2sg.m)"
+      },
+      {
+        "amharic": "መጣሽ",
+        "transliteration": "mettash",
+        "english": "came (2sg.f)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Perfect tense suffixes index person/gender directly on the verb."
+  },
+  {
+    "id": "gram_018",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Perfect tense conjugation",
+    "instruction": "Choose the correct 'to come' form for 2sg.m.",
+    "tags": [
+      "verb_conjugation"
+    ],
+    "sentence_amharic": "አንተ ትላንት ____።",
+    "sentence_english": "you (m) ____ yesterday.",
+    "sentence_transliteration": "ante telant ____",
+    "options": [
+      {
+        "amharic": "መጣህ",
+        "transliteration": "mettah",
+        "english": "came"
+      },
+      {
+        "amharic": "መጣሁ",
+        "transliteration": "mettahu",
+        "english": "came (1sg)"
+      },
+      {
+        "amharic": "መጣህ",
+        "transliteration": "mettah",
+        "english": "came (2sg.m)"
+      },
+      {
+        "amharic": "መጣሽ",
+        "transliteration": "mettash",
+        "english": "came (2sg.f)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Perfect tense suffixes index person/gender directly on the verb."
+  },
+  {
+    "id": "gram_019",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Perfect tense conjugation",
+    "instruction": "Choose the correct 'to come' form for 2sg.f.",
+    "tags": [
+      "verb_conjugation"
+    ],
+    "sentence_amharic": "አንቺ ትላንት ____።",
+    "sentence_english": "you (f) ____ yesterday.",
+    "sentence_transliteration": "anchi telant ____",
+    "options": [
+      {
+        "amharic": "መጣሽ",
+        "transliteration": "mettash",
+        "english": "came"
+      },
+      {
+        "amharic": "መጣሁ",
+        "transliteration": "mettahu",
+        "english": "came (1sg)"
+      },
+      {
+        "amharic": "መጣህ",
+        "transliteration": "mettah",
+        "english": "came (2sg.m)"
+      },
+      {
+        "amharic": "መጣሽ",
+        "transliteration": "mettash",
+        "english": "came (2sg.f)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Perfect tense suffixes index person/gender directly on the verb."
+  },
+  {
+    "id": "gram_020",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Perfect tense conjugation",
+    "instruction": "Choose the correct 'to come' form for 3sg.m.",
+    "tags": [
+      "verb_conjugation"
+    ],
+    "sentence_amharic": "እሱ ትላንት ____።",
+    "sentence_english": "he ____ yesterday.",
+    "sentence_transliteration": "esu telant ____",
+    "options": [
+      {
+        "amharic": "መጣ",
+        "transliteration": "metta",
+        "english": "came"
+      },
+      {
+        "amharic": "መጣሁ",
+        "transliteration": "mettahu",
+        "english": "came (1sg)"
+      },
+      {
+        "amharic": "መጣህ",
+        "transliteration": "mettah",
+        "english": "came (2sg.m)"
+      },
+      {
+        "amharic": "መጣሽ",
+        "transliteration": "mettash",
+        "english": "came (2sg.f)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Perfect tense suffixes index person/gender directly on the verb."
+  },
+  {
+    "id": "gram_021",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Perfect tense conjugation",
+    "instruction": "Choose the correct 'to come' form for 3sg.f.",
+    "tags": [
+      "verb_conjugation"
+    ],
+    "sentence_amharic": "እሷ ትላንት ____።",
+    "sentence_english": "she ____ yesterday.",
+    "sentence_transliteration": "eswa telant ____",
+    "options": [
+      {
+        "amharic": "መጣች",
+        "transliteration": "mettach",
+        "english": "came"
+      },
+      {
+        "amharic": "መጣሁ",
+        "transliteration": "mettahu",
+        "english": "came (1sg)"
+      },
+      {
+        "amharic": "መጣህ",
+        "transliteration": "mettah",
+        "english": "came (2sg.m)"
+      },
+      {
+        "amharic": "መጣሽ",
+        "transliteration": "mettash",
+        "english": "came (2sg.f)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Perfect tense suffixes index person/gender directly on the verb."
+  },
+  {
+    "id": "gram_022",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Perfect tense conjugation",
+    "instruction": "Choose the correct 'to write' form for 1sg.",
+    "tags": [
+      "verb_conjugation"
+    ],
+    "sentence_amharic": "እኔ ደብዳቤ ____።",
+    "sentence_english": "I ____ a letter.",
+    "sentence_transliteration": "ene debdabe ____",
+    "options": [
+      {
+        "amharic": "ጻፍኩ",
+        "transliteration": "tsaffiku",
+        "english": "wrote"
+      },
+      {
+        "amharic": "ጻፍኩ",
+        "transliteration": "tsaffiku",
+        "english": "wrote (1sg)"
+      },
+      {
+        "amharic": "ጻፍክ",
+        "transliteration": "tsaffik",
+        "english": "wrote (2sg.m)"
+      },
+      {
+        "amharic": "ጻፍሽ",
+        "transliteration": "tsaffish",
+        "english": "wrote (2sg.f)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Each person/gender pairing has a distinct perfect verb ending."
+  },
+  {
+    "id": "gram_023",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Perfect tense conjugation",
+    "instruction": "Choose the correct 'to write' form for 2sg.m.",
+    "tags": [
+      "verb_conjugation"
+    ],
+    "sentence_amharic": "አንተ ደብዳቤ ____።",
+    "sentence_english": "you (m) ____ a letter.",
+    "sentence_transliteration": "ante debdabe ____",
+    "options": [
+      {
+        "amharic": "ጻፍክ",
+        "transliteration": "tsaffik",
+        "english": "wrote"
+      },
+      {
+        "amharic": "ጻፍኩ",
+        "transliteration": "tsaffiku",
+        "english": "wrote (1sg)"
+      },
+      {
+        "amharic": "ጻፍክ",
+        "transliteration": "tsaffik",
+        "english": "wrote (2sg.m)"
+      },
+      {
+        "amharic": "ጻፍሽ",
+        "transliteration": "tsaffish",
+        "english": "wrote (2sg.f)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Each person/gender pairing has a distinct perfect verb ending."
+  },
+  {
+    "id": "gram_024",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Perfect tense conjugation",
+    "instruction": "Choose the correct 'to write' form for 2sg.f.",
+    "tags": [
+      "verb_conjugation"
+    ],
+    "sentence_amharic": "አንቺ ደብዳቤ ____።",
+    "sentence_english": "you (f) ____ a letter.",
+    "sentence_transliteration": "anchi debdabe ____",
+    "options": [
+      {
+        "amharic": "ጻፍሽ",
+        "transliteration": "tsaffish",
+        "english": "wrote"
+      },
+      {
+        "amharic": "ጻፍኩ",
+        "transliteration": "tsaffiku",
+        "english": "wrote (1sg)"
+      },
+      {
+        "amharic": "ጻፍክ",
+        "transliteration": "tsaffik",
+        "english": "wrote (2sg.m)"
+      },
+      {
+        "amharic": "ጻፍሽ",
+        "transliteration": "tsaffish",
+        "english": "wrote (2sg.f)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Each person/gender pairing has a distinct perfect verb ending."
+  },
+  {
+    "id": "gram_025",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Perfect tense conjugation",
+    "instruction": "Choose the correct 'to write' form for 3sg.m.",
+    "tags": [
+      "verb_conjugation"
+    ],
+    "sentence_amharic": "እሱ ደብዳቤ ____።",
+    "sentence_english": "he ____ a letter.",
+    "sentence_transliteration": "esu debdabe ____",
+    "options": [
+      {
+        "amharic": "ጻፈ",
+        "transliteration": "tsaffe",
+        "english": "wrote"
+      },
+      {
+        "amharic": "ጻፍኩ",
+        "transliteration": "tsaffiku",
+        "english": "wrote (1sg)"
+      },
+      {
+        "amharic": "ጻፍክ",
+        "transliteration": "tsaffik",
+        "english": "wrote (2sg.m)"
+      },
+      {
+        "amharic": "ጻፍሽ",
+        "transliteration": "tsaffish",
+        "english": "wrote (2sg.f)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Each person/gender pairing has a distinct perfect verb ending."
+  },
+  {
+    "id": "gram_026",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Perfect tense conjugation",
+    "instruction": "Choose the correct 'to write' form for 3sg.f.",
+    "tags": [
+      "verb_conjugation"
+    ],
+    "sentence_amharic": "እሷ ደብዳቤ ____።",
+    "sentence_english": "she ____ a letter.",
+    "sentence_transliteration": "eswa debdabe ____",
+    "options": [
+      {
+        "amharic": "ጻፈች",
+        "transliteration": "tsaffech",
+        "english": "wrote"
+      },
+      {
+        "amharic": "ጻፍኩ",
+        "transliteration": "tsaffiku",
+        "english": "wrote (1sg)"
+      },
+      {
+        "amharic": "ጻፍክ",
+        "transliteration": "tsaffik",
+        "english": "wrote (2sg.m)"
+      },
+      {
+        "amharic": "ጻፍሽ",
+        "transliteration": "tsaffish",
+        "english": "wrote (2sg.f)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Each person/gender pairing has a distinct perfect verb ending."
+  },
+  {
+    "id": "gram_027",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Definite suffixes -u/-w and -wa/-w",
+    "instruction": "Fill the blank with the correct definite noun form.",
+    "tags": [
+      "definite"
+    ],
+    "sentence_amharic": "____ ትልቅ ነው።",
+    "sentence_english": "____ is big (house (masc definite)).",
+    "sentence_transliteration": "____ tilik new.",
+    "options": [
+      {
+        "amharic": "ቤቱ",
+        "transliteration": "",
+        "english": "house (masc definite)"
+      },
+      {
+        "amharic": "ቤት",
+        "transliteration": "",
+        "english": "ቤት (indefinite)"
+      },
+      {
+        "amharic": "ቤትን",
+        "transliteration": "",
+        "english": "ቤት (accusative)"
+      },
+      {
+        "amharic": "ቤትዎች",
+        "transliteration": "",
+        "english": "ቤት (plural)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Consonant-final masculines usually take -u; vowel-final forms often take -w. Feminine definites typically use -wa/-w."
+  },
+  {
+    "id": "gram_028",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Definite suffixes -u/-w and -wa/-w",
+    "instruction": "Fill the blank with the correct definite noun form.",
+    "tags": [
+      "definite"
+    ],
+    "sentence_amharic": "____ ትልቅ ነው።",
+    "sentence_english": "____ is big (market (masc definite)).",
+    "sentence_transliteration": "____ tilik new.",
+    "options": [
+      {
+        "amharic": "ገበያው",
+        "transliteration": "",
+        "english": "market (masc definite)"
+      },
+      {
+        "amharic": "ገበያ",
+        "transliteration": "",
+        "english": "ገበያ (indefinite)"
+      },
+      {
+        "amharic": "ገበያን",
+        "transliteration": "",
+        "english": "ገበያ (accusative)"
+      },
+      {
+        "amharic": "ገበያዎች",
+        "transliteration": "",
+        "english": "ገበያ (plural)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Consonant-final masculines usually take -u; vowel-final forms often take -w. Feminine definites typically use -wa/-w."
+  },
+  {
+    "id": "gram_029",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Definite suffixes -u/-w and -wa/-w",
+    "instruction": "Fill the blank with the correct definite noun form.",
+    "tags": [
+      "definite"
+    ],
+    "sentence_amharic": "____ ትልቅ ነው።",
+    "sentence_english": "____ is big (book (masc definite)).",
+    "sentence_transliteration": "____ tilik new.",
+    "options": [
+      {
+        "amharic": "መጽሐፉ",
+        "transliteration": "",
+        "english": "book (masc definite)"
+      },
+      {
+        "amharic": "መጽሐፍ",
+        "transliteration": "",
+        "english": "መጽሐፍ (indefinite)"
+      },
+      {
+        "amharic": "መጽሐፍን",
+        "transliteration": "",
+        "english": "መጽሐፍ (accusative)"
+      },
+      {
+        "amharic": "መጽሐፍዎች",
+        "transliteration": "",
+        "english": "መጽሐፍ (plural)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Consonant-final masculines usually take -u; vowel-final forms often take -w. Feminine definites typically use -wa/-w."
+  },
+  {
+    "id": "gram_030",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Definite suffixes -u/-w and -wa/-w",
+    "instruction": "Fill the blank with the correct definite noun form.",
+    "tags": [
+      "definite"
+    ],
+    "sentence_amharic": "____ ትልቅ ነው።",
+    "sentence_english": "____ is big (coffee (masc definite)).",
+    "sentence_transliteration": "____ tilik new.",
+    "options": [
+      {
+        "amharic": "ቡናው",
+        "transliteration": "",
+        "english": "coffee (masc definite)"
+      },
+      {
+        "amharic": "ቡና",
+        "transliteration": "",
+        "english": "ቡና (indefinite)"
+      },
+      {
+        "amharic": "ቡናን",
+        "transliteration": "",
+        "english": "ቡና (accusative)"
+      },
+      {
+        "amharic": "ቡናዎች",
+        "transliteration": "",
+        "english": "ቡና (plural)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Consonant-final masculines usually take -u; vowel-final forms often take -w. Feminine definites typically use -wa/-w."
+  },
+  {
+    "id": "gram_031",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Definite suffixes -u/-w and -wa/-w",
+    "instruction": "Fill the blank with the correct definite noun form.",
+    "tags": [
+      "definite"
+    ],
+    "sentence_amharic": "____ ትልቅ ነው።",
+    "sentence_english": "____ is big (person (masc definite)).",
+    "sentence_transliteration": "____ tilik new.",
+    "options": [
+      {
+        "amharic": "ሰዉ",
+        "transliteration": "",
+        "english": "person (masc definite)"
+      },
+      {
+        "amharic": "ሰው",
+        "transliteration": "",
+        "english": "ሰው (indefinite)"
+      },
+      {
+        "amharic": "ሰውን",
+        "transliteration": "",
+        "english": "ሰው (accusative)"
+      },
+      {
+        "amharic": "ሰውዎች",
+        "transliteration": "",
+        "english": "ሰው (plural)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Consonant-final masculines usually take -u; vowel-final forms often take -w. Feminine definites typically use -wa/-w."
+  },
+  {
+    "id": "gram_032",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Definite suffixes -u/-w and -wa/-w",
+    "instruction": "Fill the blank with the correct definite noun form.",
+    "tags": [
+      "definite"
+    ],
+    "sentence_amharic": "____ ትልቅ ነው።",
+    "sentence_english": "____ is big (woman (fem definite)).",
+    "sentence_transliteration": "____ tilik new.",
+    "options": [
+      {
+        "amharic": "ሴቷ",
+        "transliteration": "",
+        "english": "woman (fem definite)"
+      },
+      {
+        "amharic": "ሴት",
+        "transliteration": "",
+        "english": "ሴት (indefinite)"
+      },
+      {
+        "amharic": "ሴትን",
+        "transliteration": "",
+        "english": "ሴት (accusative)"
+      },
+      {
+        "amharic": "ሴትዎች",
+        "transliteration": "",
+        "english": "ሴት (plural)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Consonant-final masculines usually take -u; vowel-final forms often take -w. Feminine definites typically use -wa/-w."
+  },
+  {
+    "id": "gram_033",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Definite suffixes -u/-w and -wa/-w",
+    "instruction": "Fill the blank with the correct definite noun form.",
+    "tags": [
+      "definite"
+    ],
+    "sentence_amharic": "____ ትልቅ ነው።",
+    "sentence_english": "____ is big (sister (fem definite)).",
+    "sentence_transliteration": "____ tilik new.",
+    "options": [
+      {
+        "amharic": "እህቷ",
+        "transliteration": "",
+        "english": "sister (fem definite)"
+      },
+      {
+        "amharic": "እህት",
+        "transliteration": "",
+        "english": "እህት (indefinite)"
+      },
+      {
+        "amharic": "እህትን",
+        "transliteration": "",
+        "english": "እህት (accusative)"
+      },
+      {
+        "amharic": "እህትዎች",
+        "transliteration": "",
+        "english": "እህት (plural)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Consonant-final masculines usually take -u; vowel-final forms often take -w. Feminine definites typically use -wa/-w."
+  },
+  {
+    "id": "gram_034",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Definite suffixes -u/-w and -wa/-w",
+    "instruction": "Fill the blank with the correct definite noun form.",
+    "tags": [
+      "definite"
+    ],
+    "sentence_amharic": "____ ትልቅ ነው።",
+    "sentence_english": "____ is big (car (fem definite)).",
+    "sentence_transliteration": "____ tilik new.",
+    "options": [
+      {
+        "amharic": "መኪናዋ",
+        "transliteration": "",
+        "english": "car (fem definite)"
+      },
+      {
+        "amharic": "መኪና",
+        "transliteration": "",
+        "english": "መኪና (indefinite)"
+      },
+      {
+        "amharic": "መኪናን",
+        "transliteration": "",
+        "english": "መኪና (accusative)"
+      },
+      {
+        "amharic": "መኪናዎች",
+        "transliteration": "",
+        "english": "መኪና (plural)"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Consonant-final masculines usually take -u; vowel-final forms often take -w. Feminine definites typically use -wa/-w."
+  },
+  {
+    "id": "gram_035",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Accusative marker -n/-in",
+    "instruction": "Choose the direct object form.",
+    "tags": [
+      "accusative"
+    ],
+    "sentence_amharic": "እኔ ____ አየሁ።",
+    "sentence_english": "I saw coffee.",
+    "sentence_transliteration": "Ene ____ ayehu.",
+    "options": [
+      {
+        "amharic": "ቡናን",
+        "transliteration": "",
+        "english": "coffee [obj]"
+      },
+      {
+        "amharic": "ቡና",
+        "transliteration": "",
+        "english": "coffee [base]"
+      },
+      {
+        "amharic": "ቡናው",
+        "transliteration": "",
+        "english": "coffee [definite]"
+      },
+      {
+        "amharic": "ቡናዎች",
+        "transliteration": "",
+        "english": "coffee [plural]"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Direct objects are marked with accusative -n/-in depending on final sound."
+  },
+  {
+    "id": "gram_036",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Accusative marker -n/-in",
+    "instruction": "Choose the direct object form.",
+    "tags": [
+      "accusative"
+    ],
+    "sentence_amharic": "እኔ ____ አየሁ።",
+    "sentence_english": "I saw water.",
+    "sentence_transliteration": "Ene ____ ayehu.",
+    "options": [
+      {
+        "amharic": "ውሃን",
+        "transliteration": "",
+        "english": "water [obj]"
+      },
+      {
+        "amharic": "ውሃ",
+        "transliteration": "",
+        "english": "water [base]"
+      },
+      {
+        "amharic": "ውሃው",
+        "transliteration": "",
+        "english": "water [definite]"
+      },
+      {
+        "amharic": "ውሃዎች",
+        "transliteration": "",
+        "english": "water [plural]"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Direct objects are marked with accusative -n/-in depending on final sound."
+  },
+  {
+    "id": "gram_037",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Accusative marker -n/-in",
+    "instruction": "Choose the direct object form.",
+    "tags": [
+      "accusative"
+    ],
+    "sentence_amharic": "እኔ ____ አየሁ።",
+    "sentence_english": "I saw the book.",
+    "sentence_transliteration": "Ene ____ ayehu.",
+    "options": [
+      {
+        "amharic": "መጽሐፉን",
+        "transliteration": "",
+        "english": "the book [obj]"
+      },
+      {
+        "amharic": "መጽሐፍ",
+        "transliteration": "",
+        "english": "the book [base]"
+      },
+      {
+        "amharic": "መጽሐፍው",
+        "transliteration": "",
+        "english": "the book [definite]"
+      },
+      {
+        "amharic": "መጽሐፍዎች",
+        "transliteration": "",
+        "english": "the book [plural]"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Direct objects are marked with accusative -n/-in depending on final sound."
+  },
+  {
+    "id": "gram_038",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Accusative marker -n/-in",
+    "instruction": "Choose the direct object form.",
+    "tags": [
+      "accusative"
+    ],
+    "sentence_amharic": "እኔ ____ አየሁ።",
+    "sentence_english": "I saw the house.",
+    "sentence_transliteration": "Ene ____ ayehu.",
+    "options": [
+      {
+        "amharic": "ቤቱን",
+        "transliteration": "",
+        "english": "the house [obj]"
+      },
+      {
+        "amharic": "ቤት",
+        "transliteration": "",
+        "english": "the house [base]"
+      },
+      {
+        "amharic": "ቤትው",
+        "transliteration": "",
+        "english": "the house [definite]"
+      },
+      {
+        "amharic": "ቤትዎች",
+        "transliteration": "",
+        "english": "the house [plural]"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Direct objects are marked with accusative -n/-in depending on final sound."
+  },
+  {
+    "id": "gram_039",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "fill_blank",
+    "lesson": "Plural -och",
+    "instruction": "Choose the correct plural noun form.",
+    "tags": [
+      "plural"
+    ],
+    "sentence_amharic": "____ ወደ ገበያ ሄዱ።",
+    "sentence_english": "____ went to the market.",
+    "sentence_transliteration": "____ wede gebeya hedu.",
+    "options": [
+      {
+        "amharic": "ተማሪዎች",
+        "transliteration": "temariwoch",
+        "english": "students"
+      },
+      {
+        "amharic": "ተማሪ",
+        "transliteration": "temari",
+        "english": "student"
+      },
+      {
+        "amharic": "ተማሪው",
+        "transliteration": "temariyu",
+        "english": "the student"
+      },
+      {
+        "amharic": "ተማሪን",
+        "transliteration": "temarin",
+        "english": "student [obj]"
+      }
+    ],
+    "correct_option_index": 0,
+    "explanation": "Regular plural nouns use the suffix -och."
+  },
+  {
+    "id": "gram_040",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "multiple_choice",
+    "instruction": "Select the correct answer.",
+    "lesson": "Accusative marker -n/-in",
+    "tags": [
+      "accusative"
+    ],
+    "question": "Which form correctly marks the object “book”?",
+    "options": [
+      "መጽሐፍ",
+      "መጽሐፉ",
+      "መጽሐፉን",
+      "መጽሐፎች"
+    ],
+    "correct_index": 2,
+    "explanation": "Object marking appears as -n on the definite form: metshafun."
+  },
+  {
+    "id": "gram_041",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "multiple_choice",
+    "instruction": "Select the correct answer.",
+    "lesson": "Accusative marker -n/-in",
+    "tags": [
+      "accusative"
+    ],
+    "question": "Choose the correct direct object form of ቡና.",
+    "options": [
+      "ቡና",
+      "ቡናው",
+      "ቡናን",
+      "ቡናዎች"
+    ],
+    "correct_index": 2,
+    "explanation": "Vowel-final nouns take -n directly in accusative: bunnan."
+  },
+  {
+    "id": "gram_042",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "multiple_choice",
+    "instruction": "Select the correct answer.",
+    "lesson": "Accusative marker -n/-in",
+    "tags": [
+      "accusative"
+    ],
+    "question": "Which sentence is correct?",
+    "options": [
+      "እኔ ቤት አየሁ።",
+      "እኔ ቤቱን አየሁ።",
+      "እኔ ቤቱ አየሁ።",
+      "እኔ ቤቶች አየሁ።"
+    ],
+    "correct_index": 1,
+    "explanation": "The object “the house” requires accusative marking: betun."
+  },
+  {
+    "id": "gram_043",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "multiple_choice",
+    "instruction": "Select the correct answer.",
+    "lesson": "Accusative marker -n/-in",
+    "tags": [
+      "accusative"
+    ],
+    "question": "Pick the object form in “She bought the water.”",
+    "options": [
+      "ውሃ",
+      "ውሃን",
+      "ውሃው",
+      "ውሃዎች"
+    ],
+    "correct_index": 1,
+    "explanation": "Object form is wuhan."
+  },
+  {
+    "id": "gram_044",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "multiple_choice",
+    "instruction": "Select the correct answer.",
+    "lesson": "Adjective-before-noun",
+    "tags": [
+      "adjective_definite"
+    ],
+    "question": "Which phrase is grammatically correct for “the red car”?",
+    "options": [
+      "መኪና ቀዩ",
+      "ቀዩ መኪና",
+      "መኪናው ቀይ",
+      "ቀይ መኪናው"
+    ],
+    "correct_index": 1,
+    "explanation": "Adjective comes first; definiteness is carried on the adjective."
+  },
+  {
+    "id": "gram_045",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "multiple_choice",
+    "instruction": "Select the correct answer.",
+    "lesson": "Adjective-before-noun",
+    "tags": [
+      "adjective_definite"
+    ],
+    "question": "Choose the best form for “the black house.”",
+    "options": [
+      "ቤቱ ጥቁር",
+      "ጥቁሩ ቤት",
+      "ቤት ጥቁሩ",
+      "ጥቁር ቤቱ"
+    ],
+    "correct_index": 1,
+    "explanation": "Correct phrase order is adjective + noun with definite adjective."
+  },
+  {
+    "id": "gram_046",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "multiple_choice",
+    "instruction": "Select the correct answer.",
+    "lesson": "Adjective-before-noun",
+    "tags": [
+      "adjective_definite"
+    ],
+    "question": "Select the correct phrase for “the new book.”",
+    "options": [
+      "መጽሐፍ አዲሱ",
+      "አዲሱ መጽሐፍ",
+      "መጽሐፉ አዲስ",
+      "አዲስ መጽሐፉ"
+    ],
+    "correct_index": 1,
+    "explanation": "Definiteness appears on the adjective: adisu metshaf."
+  },
+  {
+    "id": "gram_047",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "multiple_choice",
+    "instruction": "Select the correct answer.",
+    "lesson": "Adjective-before-noun",
+    "tags": [
+      "adjective_definite"
+    ],
+    "question": "Choose the correct phrase for “the sweet coffee.”",
+    "options": [
+      "ቡና ጣፋጩ",
+      "ጣፋጩ ቡና",
+      "ቡናው ጣፋጭ",
+      "ጣፋጭ ቡናው"
+    ],
+    "correct_index": 1,
+    "explanation": "Adjective precedes the noun and carries definiteness."
+  },
+  {
+    "id": "gram_048",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "multiple_choice",
+    "instruction": "Select the correct answer.",
+    "lesson": "Adjective-before-noun",
+    "tags": [
+      "adjective_definite"
+    ],
+    "question": "Which phrase means “the long road”?",
+    "options": [
+      "መንገድ ረጅሙ",
+      "ረጅሙ መንገድ",
+      "መንገዱ ረጅም",
+      "ረጅም መንገዱ"
+    ],
+    "correct_index": 1,
+    "explanation": "Use adjective-first with definite adjective: rejjimu mengedd."
+  },
+  {
+    "id": "gram_049",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "multiple_choice",
+    "instruction": "Select the correct answer.",
+    "lesson": "Adjective-before-noun",
+    "tags": [
+      "adjective_definite"
+    ],
+    "question": "Pick the correct phrase for “the white shirt.”",
+    "options": [
+      "ሸሚዝ ነጩ",
+      "ነጩ ሸሚዝ",
+      "ሸሚዙ ነጭ",
+      "ነጭ ሸሚዙ"
+    ],
+    "correct_index": 1,
+    "explanation": "The definite marker attaches to the adjective in this pattern."
+  },
+  {
+    "id": "gram_050",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "multiple_choice",
+    "instruction": "Select the correct answer.",
+    "lesson": "Ejective consonants",
+    "tags": [
+      "ejective"
+    ],
+    "question": "Which transliteration marks the ejective in ጥቁር?",
+    "options": [
+      "tiqur",
+      "t'iqur",
+      "tikur",
+      "tiqurh"
+    ],
+    "correct_index": 1,
+    "explanation": "Ejective consonants are marked with an apostrophe in ETS style."
+  },
+  {
+    "id": "gram_051",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "multiple_choice",
+    "instruction": "Select the correct answer.",
+    "lesson": "Ejective consonants",
+    "tags": [
+      "ejective"
+    ],
+    "question": "Choose the correct transliteration for ጫማ.",
+    "options": [
+      "chama",
+      "ch'amma",
+      "tsama",
+      "shama"
+    ],
+    "correct_index": 1,
+    "explanation": "ጫ takes an ejective ch sound in transliteration."
+  },
+  {
+    "id": "gram_052",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "multiple_choice",
+    "instruction": "Select the correct answer.",
+    "lesson": "Ejective consonants",
+    "tags": [
+      "ejective"
+    ],
+    "question": "Which option correctly marks ቀይ?",
+    "options": [
+      "qeyy",
+      "q'eyy",
+      "keyy",
+      "gey"
+    ],
+    "correct_index": 1,
+    "explanation": "Keep ejective q marked in transliteration for contrast."
+  },
+  {
+    "id": "gram_053",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "multiple_choice",
+    "instruction": "Select the correct answer.",
+    "lesson": "Ejective consonants",
+    "tags": [
+      "ejective"
+    ],
+    "question": "Pick the best ETS-style transliteration for ፓፓ.",
+    "options": [
+      "papa",
+      "p'apa",
+      "baba",
+      "fafa"
+    ],
+    "correct_index": 1,
+    "explanation": "The ejective p is represented as p'."
+  },
+  {
+    "id": "gram_054",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "multiple_choice",
+    "instruction": "Select the correct answer.",
+    "lesson": "Plural -och",
+    "tags": [
+      "plural"
+    ],
+    "question": "What is the plural of ልጅ?",
+    "options": [
+      "ልጅው",
+      "ልጅን",
+      "ልጆች",
+      "ልጅቷ"
+    ],
+    "correct_index": 2,
+    "explanation": "Use -och for regular plural: lijjoch."
+  },
+  {
+    "id": "gram_055",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "match_pairs",
+    "lesson": "Plural nouns",
+    "tags": [
+      "plural"
+    ],
+    "instruction": "Match singular nouns to their plural forms.",
+    "pairs": [
+      {
+        "left": "ሰው",
+        "right": "ሰዎች",
+        "left_gloss": "person",
+        "right_gloss": "people"
+      },
+      {
+        "left": "ልጅ",
+        "right": "ልጆች",
+        "left_gloss": "child",
+        "right_gloss": "children"
+      },
+      {
+        "left": "ቤት",
+        "right": "ቤቶች",
+        "left_gloss": "house",
+        "right_gloss": "houses"
+      },
+      {
+        "left": "መጽሐፍ",
+        "right": "መጽሐፎች",
+        "left_gloss": "book",
+        "right_gloss": "books"
+      }
+    ],
+    "explanation": "Plural is usually formed with -och."
+  },
+  {
+    "id": "gram_056",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "match_pairs",
+    "lesson": "Plural nouns",
+    "tags": [
+      "plural"
+    ],
+    "instruction": "Match base nouns with plural forms.",
+    "pairs": [
+      {
+        "left": "ተማሪ",
+        "right": "ተማሪዎች",
+        "left_gloss": "student",
+        "right_gloss": "students"
+      },
+      {
+        "left": "አባት",
+        "right": "አባቶች",
+        "left_gloss": "father",
+        "right_gloss": "fathers"
+      },
+      {
+        "left": "እናት",
+        "right": "እናቶች",
+        "left_gloss": "mother",
+        "right_gloss": "mothers"
+      },
+      {
+        "left": "ወንድም",
+        "right": "ወንድሞች",
+        "left_gloss": "brother",
+        "right_gloss": "brothers"
+      }
+    ],
+    "explanation": "Pluralization with -och is productive for many nouns."
+  },
+  {
+    "id": "gram_057",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "match_pairs",
+    "lesson": "Definite forms",
+    "tags": [
+      "definite"
+    ],
+    "instruction": "Match base nouns to definite forms.",
+    "pairs": [
+      {
+        "left": "ቤት",
+        "right": "ቤቱ",
+        "left_gloss": "house",
+        "right_gloss": "the house"
+      },
+      {
+        "left": "መጽሐፍ",
+        "right": "መጽሐፉ",
+        "left_gloss": "book",
+        "right_gloss": "the book"
+      },
+      {
+        "left": "ሴት",
+        "right": "ሴቷ",
+        "left_gloss": "woman",
+        "right_gloss": "the woman"
+      },
+      {
+        "left": "መኪና",
+        "right": "መኪናዋ",
+        "left_gloss": "car",
+        "right_gloss": "the car"
+      }
+    ],
+    "explanation": "Masculine and feminine definites use different suffix patterns."
+  },
+  {
+    "id": "gram_058",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "match_pairs",
+    "lesson": "Accusative objects",
+    "tags": [
+      "accusative"
+    ],
+    "instruction": "Match base nouns to accusative object forms.",
+    "pairs": [
+      {
+        "left": "ቡና",
+        "right": "ቡናን",
+        "left_gloss": "coffee",
+        "right_gloss": "coffee [obj]"
+      },
+      {
+        "left": "ውሃ",
+        "right": "ውሃን",
+        "left_gloss": "water",
+        "right_gloss": "water [obj]"
+      },
+      {
+        "left": "ቤቱ",
+        "right": "ቤቱን",
+        "left_gloss": "the house",
+        "right_gloss": "the house [obj]"
+      },
+      {
+        "left": "መጽሐፉ",
+        "right": "መጽሐፉን",
+        "left_gloss": "the book",
+        "right_gloss": "the book [obj]"
+      }
+    ],
+    "explanation": "Object marking adds -n/-in to the target noun form."
+  },
+  {
+    "id": "gram_059",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "match_pairs",
+    "lesson": "Verb conjugation",
+    "tags": [
+      "verb_conjugation"
+    ],
+    "instruction": "Match pronouns with correct perfect forms of “to come”.",
+    "pairs": [
+      {
+        "left": "እኔ",
+        "right": "መጣሁ",
+        "left_gloss": "I",
+        "right_gloss": "came (1sg)"
+      },
+      {
+        "left": "አንተ",
+        "right": "መጣህ",
+        "left_gloss": "you (m)",
+        "right_gloss": "came (2sg.m)"
+      },
+      {
+        "left": "አንቺ",
+        "right": "መጣሽ",
+        "left_gloss": "you (f)",
+        "right_gloss": "came (2sg.f)"
+      },
+      {
+        "left": "እሷ",
+        "right": "መጣች",
+        "left_gloss": "she",
+        "right_gloss": "came (3sg.f)"
+      }
+    ],
+    "explanation": "Perfect-tense endings encode person and gender."
+  },
+  {
+    "id": "gram_060",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "match_pairs",
+    "lesson": "Verb conjugation",
+    "tags": [
+      "verb_conjugation"
+    ],
+    "instruction": "Match pronouns with correct perfect forms of “to write”.",
+    "pairs": [
+      {
+        "left": "እኔ",
+        "right": "ጻፍኩ",
+        "left_gloss": "I",
+        "right_gloss": "wrote (1sg)"
+      },
+      {
+        "left": "አንተ",
+        "right": "ጻፍክ",
+        "left_gloss": "you (m)",
+        "right_gloss": "wrote (2sg.m)"
+      },
+      {
+        "left": "አንቺ",
+        "right": "ጻፍሽ",
+        "left_gloss": "you (f)",
+        "right_gloss": "wrote (2sg.f)"
+      },
+      {
+        "left": "እሱ",
+        "right": "ጻፈ",
+        "left_gloss": "he",
+        "right_gloss": "wrote (3sg.m)"
+      }
+    ],
+    "explanation": "Notice the person markers in each perfect form."
+  },
+  {
+    "id": "gram_061",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "match_pairs",
+    "lesson": "SOV chunks",
+    "tags": [
+      "sov"
+    ],
+    "instruction": "Match each clause chunk to its role.",
+    "pairs": [
+      {
+        "left": "ተማሪው",
+        "right": "Subject",
+        "left_gloss": "the student",
+        "right_gloss": "S"
+      },
+      {
+        "left": "መጽሐፉን",
+        "right": "Object",
+        "left_gloss": "the book [obj]",
+        "right_gloss": "O"
+      },
+      {
+        "left": "አነበበ",
+        "right": "Verb",
+        "left_gloss": "read",
+        "right_gloss": "V"
+      },
+      {
+        "left": "S-O-V",
+        "right": "Canonical order",
+        "left_gloss": "pattern",
+        "right_gloss": "Amharic clause order"
+      }
+    ],
+    "explanation": "Simple declaratives are ordered SOV."
+  },
+  {
+    "id": "gram_062",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "match_pairs",
+    "lesson": "Adjective + noun",
+    "tags": [
+      "adjective_definite"
+    ],
+    "instruction": "Match adjective-first phrases with translations.",
+    "pairs": [
+      {
+        "left": "ቀዩ መኪና",
+        "right": "the red car",
+        "left_gloss": "phrase",
+        "right_gloss": "translation"
+      },
+      {
+        "left": "ጥቁሩ ቤት",
+        "right": "the black house",
+        "left_gloss": "phrase",
+        "right_gloss": "translation"
+      },
+      {
+        "left": "አዲሱ መጽሐፍ",
+        "right": "the new book",
+        "left_gloss": "phrase",
+        "right_gloss": "translation"
+      },
+      {
+        "left": "ጣፋጩ ቡና",
+        "right": "the sweet coffee",
+        "left_gloss": "phrase",
+        "right_gloss": "translation"
+      }
+    ],
+    "explanation": "Definite adjective + noun forms a stable nominal phrase."
+  },
+  {
+    "id": "gram_063",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "match_pairs",
+    "lesson": "Ejective contrasts",
+    "tags": [
+      "ejective"
+    ],
+    "instruction": "Match words to transliterations with ejective marks.",
+    "pairs": [
+      {
+        "left": "ጥቁር",
+        "right": "t'iqur",
+        "left_gloss": "black",
+        "right_gloss": "ETS transliteration"
+      },
+      {
+        "left": "ጫማ",
+        "right": "ch'amma",
+        "left_gloss": "shoe",
+        "right_gloss": "ETS transliteration"
+      },
+      {
+        "left": "ቀይ",
+        "right": "q'eyy",
+        "left_gloss": "red",
+        "right_gloss": "ETS transliteration"
+      },
+      {
+        "left": "ፓፓ",
+        "right": "p'apa",
+        "left_gloss": "loanword sample",
+        "right_gloss": "ETS transliteration"
+      }
+    ],
+    "explanation": "Ejective consonants must remain explicit in transliteration."
+  },
+  {
+    "id": "gram_064",
+    "module_id": "grammar",
+    "xp_reward": 10,
+    "type": "match_pairs",
+    "lesson": "Case and definiteness review",
+    "tags": [
+      "definite",
+      "accusative"
+    ],
+    "instruction": "Match each base form to its definite+object form.",
+    "pairs": [
+      {
+        "left": "ቤት",
+        "right": "ቤቱን",
+        "left_gloss": "house",
+        "right_gloss": "the house [obj]"
+      },
+      {
+        "left": "መጽሐፍ",
+        "right": "መጽሐፉን",
+        "left_gloss": "book",
+        "right_gloss": "the book [obj]"
+      },
+      {
+        "left": "ሴት",
+        "right": "ሴቷን",
+        "left_gloss": "woman",
+        "right_gloss": "the woman [obj]"
+      },
+      {
+        "left": "መኪና",
+        "right": "መኪናዋን",
+        "left_gloss": "car",
+        "right_gloss": "the car [obj]"
+      }
+    ],
+    "explanation": "Definite suffixes combine with accusative -n in object position."
+  }
+]

@@ -36,12 +36,27 @@ export interface CustomVocab {
     user_audio_blob: ArrayBuffer | null
 }
 
-export interface FidelChar {
-    base_consonant: string
+export type FidelGroup = 'A' | 'B' | 'C' | 'LAB'
+export type FidelOrderNumber = 1 | 2 | 3 | 4 | 5 | 6 | 7
+export type FidelVowel = 'ä' | 'u' | 'i' | 'a' | 'e' | 'ə' | 'o'
+
+export interface FidelOrder {
+    order: FidelOrderNumber
+    vowel: FidelVowel
+    char: string
+    codepoint: string
     romanization: string
-    orders: string[]  // array of 7 Unicode codepoints, one per vowel order
+}
+
+export interface FidelChar {
+    id: string
+    base_consonant_romanization: string
+    display_name: string
+    group: FidelGroup
+    orders: FidelOrder[]
     is_labiovelar: boolean
     frequency_rank: number
+    notes: string
 }
 
 export interface VocabWord {
