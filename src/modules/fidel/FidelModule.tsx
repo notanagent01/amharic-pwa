@@ -199,9 +199,9 @@ function FidelTracing({ char, onBack }: { char: FidelChar, onBack: () => void })
 
     if (phase === 'intro') {
         return (
-            <div className="flex flex-col items-center justify-center min-h-[60vh] p-6 animate-in fade-in">
-                <h2 className="text-2xl font-bold mb-8">Watch Stroke Order</h2>
-                <div className="w-full max-w-[400px] aspect-square">
+            <div className="flex flex-col items-center justify-center min-h-[60vh] p-6 animate-fade-in">
+                <h2 className="text-2xl font-bold mb-8 text-text">Watch Stroke Order</h2>
+                <div className="w-full max-w-[400px] aspect-square bg-surface border border-border rounded-xl">
                     {SVGAnimations[char.group] || SVGAnimations.A}
                 </div>
             </div>
@@ -214,13 +214,13 @@ function FidelTracing({ char, onBack }: { char: FidelChar, onBack: () => void })
         const showConfetti = avgScore >= 0.90;
 
         return (
-            <div className="flex flex-col items-center justify-center min-h-[60vh] p-6 animate-in zoom-in">
+            <div className="flex flex-col items-center justify-center min-h-[60vh] p-6 animate-fade-in">
                 {showConfetti && <ConfettiAnimation />}
-                <div lang="am" className="text-8xl mb-8 font-bold text-center fidel-char text-slate-900 dark:text-slate-100">{char.display_name}</div>
-                <div className={`text-3xl font-bold mb-6 ${isSuccess ? 'text-emerald-500' : 'text-amber-500'}`}>
+                <div lang="am" className="text-8xl mb-8 font-bold text-center fidel-char text-text">{char.display_name}</div>
+                <div className={`text-3xl font-bold mb-6 ${isSuccess ? 'text-[#4CAF50]' : 'text-secondary'}`}>
                     {isSuccess ? 'Mastered!' : 'Keep Practicing'}
                 </div>
-                <div className="text-lg mb-12 text-slate-600 dark:text-slate-400">
+                <div className="text-lg mb-12 text-muted">
                     Accuracy: {Math.round(avgScore * 100)}%
                 </div>
                 <div className="flex gap-4">
@@ -228,10 +228,10 @@ function FidelTracing({ char, onBack }: { char: FidelChar, onBack: () => void })
                         setPhase('tracing');
                         setStrokeIndex(0);
                         setResults([]);
-                    }} className="px-6 py-3 rounded-xl font-semibold bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 transition">
+                    }} className="px-6 py-3 rounded-xl font-semibold bg-surface border border-border text-text hover:bg-surface-hover transition">
                         Retry
                     </button>
-                    <button onClick={onBack} className="px-6 py-3 rounded-xl font-semibold bg-blue-600 text-white hover:bg-blue-500 transition shadow-lg shadow-blue-500/30">
+                    <button onClick={onBack} className="px-6 py-3 rounded-xl font-semibold bg-primary text-white hover:bg-primary/90 transition shadow-lg shadow-primary/30">
                         Next Character
                     </button>
                 </div>
@@ -240,16 +240,16 @@ function FidelTracing({ char, onBack }: { char: FidelChar, onBack: () => void })
     }
 
     return (
-        <div className="flex flex-col items-center p-4 max-w-lg mx-auto w-full">
+        <div className="flex flex-col items-center p-4 max-w-lg mx-auto w-full pb-24">
             <div className="flex w-full items-center justify-between mb-6">
-                <button onClick={onBack} className="p-2 -ml-2 text-slate-500 hover:text-slate-800 dark:hover:text-slate-200">
+                <button onClick={onBack} className="p-2 -ml-2 text-muted hover:text-text transition-colors">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
                 </button>
-                <h2 className="text-xl font-bold font-mono">{char.base_consonant_romanization.toUpperCase()}</h2>
+                <h2 className="text-xl font-bold font-mono text-text">{char.base_consonant_romanization.toUpperCase()}</h2>
                 <div className="w-10"></div>
             </div>
 
-            <div className="w-full max-w-[400px] aspect-square bg-slate-100 dark:bg-slate-800 rounded-2xl shadow-inner relative touch-none overflow-hidden">
+            <div className="w-full max-w-[400px] aspect-square bg-surface border border-border rounded-2xl shadow-inner relative touch-none overflow-hidden">
                 <canvas
                     ref={canvasRef}
                     width={400}
@@ -266,8 +266,8 @@ function FidelTracing({ char, onBack }: { char: FidelChar, onBack: () => void })
                 />
                 <div className="absolute top-4 right-4 flex gap-1">
                     {refStrokes.map((_, i) => (
-                        <div key={i} className={`w-3 h-3 rounded-full transition-colors ${i < strokeIndex ? (results[i]?.is_correct ? 'bg-emerald-500' : 'bg-red-500') :
-                            i === strokeIndex ? 'bg-blue-400 animate-pulse' : 'bg-slate-300 dark:bg-slate-600'
+                        <div key={i} className={`w-3 h-3 rounded-full transition-colors ${i < strokeIndex ? (results[i]?.is_correct ? 'bg-[#4CAF50]' : 'bg-primary') :
+                            i === strokeIndex ? 'bg-secondary animate-pulse' : 'bg-surface-hover'
                             }`} />
                     ))}
                 </div>
@@ -275,6 +275,8 @@ function FidelTracing({ char, onBack }: { char: FidelChar, onBack: () => void })
         </div>
     );
 }
+
+import { SectionHeader } from '@/components/ui/SectionHeader';
 
 // --- FidelChart Component ---
 export default function FidelModule() {
@@ -297,17 +299,17 @@ export default function FidelModule() {
     const chars = getGroup(activeTab);
 
     return (
-        <div className="max-w-4xl mx-auto p-4 md:p-8 animate-in fade-in slide-in-from-bottom-4">
-            <h1 className="text-3xl font-extrabold mb-8 text-slate-900 dark:text-white tracking-tight">Fidel Script</h1>
+        <div className="max-w-4xl mx-auto p-4 md:p-8 animate-fade-in pb-24">
+            <SectionHeader title="Fidel Script" subtitle="Master the Ethiopic alphabet" />
 
-            <div className="flex space-x-2 mb-8 bg-slate-100 dark:bg-slate-800/50 p-1.5 rounded-xl overflow-x-auto hide-scrollbar">
+            <div className="flex space-x-2 mb-8 bg-surface/50 p-1.5 rounded-xl overflow-x-auto hide-scrollbar border border-border">
                 {(['A', 'B', 'C', 'LAB'] as const).map(tab => (
                     <button
                         key={tab}
                         onClick={() => setActiveTab(tab)}
                         className={`flex-1 min-w-[80px] py-2.5 px-4 rounded-lg font-semibold text-sm transition-all shadow-sm ${activeTab === tab
-                            ? 'bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 shadow-md ring-1 ring-slate-200 dark:ring-slate-600'
-                            : 'text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700/50 hover:text-slate-900 dark:hover:text-white'
+                            ? 'bg-surface text-primary shadow-md ring-1 ring-border'
+                            : 'text-muted hover:bg-surface-hover hover:text-text'
                             }`}
                     >
                         Group {tab}
@@ -320,24 +322,24 @@ export default function FidelModule() {
                     // Check for fake fidel_confidence prop as requested
                     const isPending = (char as any).fidel_confidence === 'pending';
                     const prog = progresses[`char_${char.id}`];
-                    const badgeColor = prog?.status === 'complete' ? 'bg-emerald-500' : prog ? 'bg-amber-400' : 'bg-slate-300 dark:bg-slate-600';
+                    const badgeColor = prog?.status === 'complete' ? 'bg-[#4CAF50]' : prog ? 'bg-secondary' : 'bg-surface-hover';
 
                     return (
                         <button
                             key={char.id}
                             disabled={isPending}
                             onClick={() => !isPending && setTracingChar(char)}
-                            className={`relative flex flex-col p-4 rounded-2xl border-2 transition-all text-left overflow-hidden ${isPending
-                                ? 'border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 opacity-60 cursor-not-allowed'
-                                : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1'
+                            className={`relative flex flex-col p-4 rounded-2xl border transition-all text-left overflow-hidden ${isPending
+                                ? 'border-border/50 bg-surface/30 opacity-60 cursor-not-allowed'
+                                : 'border-border bg-surface hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1'
                                 }`}
                         >
                             <div className="flex justify-between items-start mb-3">
-                                <span className={`text-sm font-mono font-bold tracking-widest ${isPending ? 'italic text-slate-500' : 'text-slate-400'}`}>
+                                <span className={`text-sm font-mono font-bold tracking-widest ${isPending ? 'italic text-muted/50' : 'text-muted'}`}>
                                     {char.base_consonant_romanization.toUpperCase()}
                                 </span>
                                 {isPending ? (
-                                    <span className="text-amber-500 text-sm" title="Pending content">⚠️</span>
+                                    <span className="text-secondary text-sm" title="Pending content">⚠️</span>
                                 ) : (
                                     <div className={`w-3 h-3 rounded-full shadow-sm ${badgeColor}`} />
                                 )}
@@ -346,10 +348,10 @@ export default function FidelModule() {
                             <div className="flex justify-between items-end gap-1 mt-auto">
                                 {char.orders.map(o => (
                                     <div key={o.order} className="flex flex-col items-center gap-1 group">
-                                        <span lang="am" className="text-2xl md:text-3xl fidel-char text-slate-900 dark:text-slate-100 group-hover:text-blue-600 transition-colors">
+                                        <span lang="am" className="text-2xl md:text-3xl fidel-char text-text group-hover:text-primary transition-colors">
                                             {o.char}
                                         </span>
-                                        <span className="text-[10px] text-slate-400 font-medium">
+                                        <span className="text-[10px] text-muted font-medium">
                                             {o.romanization}
                                         </span>
                                     </div>

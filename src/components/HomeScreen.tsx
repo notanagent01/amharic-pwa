@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { getUserPrefs, getAllCards, getProgress } from '@/lib/db'
+import { Card } from '@/components/ui/Card'
+import { ProgressRing } from '@/components/ui/ProgressRing'
+import { Icon } from '@/components/ui/Icon'
+import { SectionHeader } from '@/components/ui/SectionHeader'
 
 export default function HomeScreen() {
     const [xp, setXp] = useState(0)
@@ -25,18 +29,12 @@ export default function HomeScreen() {
                 setStreak(prefs.streak_count)
 
                 // 2. Load Fidel unlock percentage
-                // Spec: "Total fidel characters unlocked: count cards in IndexedDB with module_id = 'fidel' and progress status = 'complete' and fidel_confidence !== "pending""
-                // Wait, progress status = 'complete' means counting *which* cards?
-                // The spec says: count cards where module_id = 'fidel' AND the progress for those cards? No, there is no card-level progress in the schema. "progress status = 'complete'" might refer to progress table, but the spec says "count cards in IndexedDB with module_id = 'fidel' and progress status = 'complete'".
-                // Rechecking spec: cards just have { id, front_fidel, front_roman, back, audio_key, module_id, fidel_confidence }
-                // So counting unlocked cards: cards just existence in IDB usually means they are unlocked.
                 const allCards = await getAllCards('fidel')
                 const unlockedCards = allCards.filter(c => c.fidel_confidence !== 'pending')
                 const calculatedPercentage = Math.round((unlockedCards.length / 287) * 100)
                 setPercentage(Math.min(100, calculatedPercentage))
 
                 // 3. Moduled unlock status
-                // Curriculum Order: Fidel -> Phonology(n/a) -> Vocab -> Grammar -> Dialogues
                 const srsCards = await getAllCards()
                 const hasSrsCards = srsCards.length > 0;
 
@@ -58,21 +56,18 @@ export default function HomeScreen() {
         loadData()
     }, [])
 
-    const radius = 40
-    const circumference = 2 * Math.PI * radius
-    const strokeDashoffset = circumference - (percentage / 100) * circumference
-
     return (
-        <div className="p-4 space-y-6 animate-in fade-in duration-500">
+        <div className="p-4 space-y-8 animate-fade-in max-w-lg mx-auto pb-24">
+            {/* Header section */}
             <div className="flex justify-between items-center mt-4">
                 <div>
-                    <h1 className="text-sm text-gray-400">Welcome back</h1>
-                    <p lang="am" className="fidel-char text-3xl font-bold mt-1">ጤና ይስጥልኝ</p>
+                    <h1 className="text-sm font-medium text-muted uppercase tracking-wider">Welcome back</h1>
+                    <p lang="am" className="fidel-char text-3xl font-bold mt-1 text-primary">ጤና ይስጥልኝ</p>
                 </div>
-                <div className="text-right space-y-1">
-                    <div className="text-sm font-semibold bg-surface rounded-full px-3 py-1 flex items-center justify-end gap-2 shadow-sm relative overflow-hidden">
+                <div className="text-right space-y-2">
+                    <div className="text-sm font-semibold bg-surface border border-border rounded-full px-3 py-1 flex items-center justify-end gap-2 shadow-sm relative overflow-hidden">
                         {streak >= 3 && (
-                            <svg className="w-4 h-4 text-orange-500 absolute left-2 top-1.5" viewBox="0 0 24 24" fill="currentColor">
+                            <svg className="w-4 h-4 text-secondary absolute left-2 top-1.5" viewBox="0 0 24 24" fill="currentColor">
                                 <style>
                                     {`
                                         @keyframes flicker {
@@ -92,65 +87,45 @@ export default function HomeScreen() {
                         )}
                         <span className={streak >= 3 ? "ml-4" : ""}>{streak >= 3 ? "" : "🔥"} {streak} day streak</span>
                     </div>
-                    <div className="text-sm font-semibold bg-surface rounded-full px-3 py-1 flex items-center justify-end gap-2 shadow-sm">
-                        ⭐ {xp} XP
+                    <div className="text-sm font-semibold bg-surface border border-border rounded-full px-3 py-1 flex items-center justify-end gap-2 shadow-sm text-secondary">
+                        <Icon name="star" size={14} className="text-secondary" /> {xp} XP
                     </div>
                 </div>
             </div>
 
-            <div className="flex justify-center my-8">
-                <div className="relative w-32 h-32 flex items-center justify-center">
-                    <svg className="w-full h-full transform -rotate-90">
-                        <circle
-                            className="text-gray-800"
-                            strokeWidth="8"
-                            stroke="currentColor"
-                            fill="transparent"
-                            r={radius}
-                            cx="64"
-                            cy="64"
-                        />
-                        <circle
-                            className="text-accent transition-all duration-1000 ease-out"
-                            strokeWidth="8"
-                            strokeDasharray={circumference}
-                            strokeDashoffset={strokeDashoffset}
-                            strokeLinecap="round"
-                            stroke="currentColor"
-                            fill="transparent"
-                            r={radius}
-                            cx="64"
-                            cy="64"
-                        />
-                    </svg>
-                    <div className="absolute flex flex-col items-center justify-center text-center">
-                        <span className="text-2xl font-bold">{percentage}%</span>
-                        <span className="text-xs text-gray-400">Mastery</span>
-                    </div>
+            {/* Progress Section */}
+            <Card padding="lg" className="flex flex-col items-center text-center">
+                <ProgressRing progress={percentage} size={120} strokeWidth={8} />
+                <div className="mt-4">
+                    <h2 className="text-xl font-bold font-ethiopic text-text">Fidel Mastery</h2>
+                    <p className="text-muted text-sm mt-1">Learn the alphabet</p>
                 </div>
-            </div>
+                <Link to="/fidel" className="mt-6 w-full py-3 bg-primary/10 text-primary font-semibold rounded-xl hover:bg-primary/20 transition-colors">
+                    Continue Learning
+                </Link>
+            </Card>
 
-            <div className="grid grid-cols-2 gap-4">
-                <Link to="/fidel" className={`p-6 rounded-2xl flex flex-col items-center justify-center gap-2 transition-all ${modulesUnlocked.fidel ? 'bg-surface hover:bg-surface/80 active:scale-95 text-white shadow-sm' : 'bg-gray-900/50 text-gray-600 pointer-events-none'}`}>
-                    <span className="text-3xl">ሀ</span>
-                    <span className="font-semibold">Fidel</span>
-                </Link>
-                <Link to="/srs" className={`p-6 rounded-2xl flex flex-col items-center justify-center gap-2 transition-all ${modulesUnlocked.srs ? 'bg-surface hover:bg-surface/80 active:scale-95 text-white shadow-sm' : 'bg-gray-900/50 text-gray-600 pointer-events-none'}`}>
-                    <span className="text-3xl">{modulesUnlocked.srs ? '📇' : '🔒'}</span>
-                    <span className="font-semibold">Review</span>
-                </Link>
-                <Link to="/vocab" className={`p-6 rounded-2xl flex flex-col items-center justify-center gap-2 transition-all ${modulesUnlocked.vocab ? 'bg-surface hover:bg-surface/80 active:scale-95 text-white shadow-sm' : 'bg-gray-900/50 text-gray-600 pointer-events-none'}`}>
-                    <span className="text-3xl">{modulesUnlocked.vocab ? '📚' : '🔒'}</span>
-                    <span className="font-semibold">Vocab</span>
-                </Link>
-                <Link to="/grammar" className={`p-6 rounded-2xl flex flex-col items-center justify-center gap-2 transition-all ${modulesUnlocked.grammar ? 'bg-surface hover:bg-surface/80 active:scale-95 text-white shadow-sm' : 'bg-gray-900/50 text-gray-600 pointer-events-none'}`}>
-                    <span className="text-3xl">{modulesUnlocked.grammar ? '🧩' : '🔒'}</span>
-                    <span className="font-semibold">Grammar</span>
-                </Link>
-                <Link to="/dialogue" className={`col-span-2 p-6 rounded-2xl flex flex-col items-center justify-center gap-2 transition-all ${modulesUnlocked.dialogue ? 'bg-surface hover:bg-surface/80 active:scale-95 text-white shadow-sm' : 'bg-gray-900/50 text-gray-600 pointer-events-none'}`}>
-                    <span className="text-3xl">{modulesUnlocked.dialogue ? '💬' : '🔒'}</span>
-                    <span className="font-semibold">Dialogues</span>
-                </Link>
+            {/* Modules Grid */}
+            <div>
+                <SectionHeader title="Path" />
+                <div className="grid grid-cols-2 gap-4">
+                    <Link to="/srs" className={`p-4 rounded-2xl border flex flex-col items-center justify-center gap-3 transition-all ${modulesUnlocked.srs ? 'bg-surface border-border hover:border-primary/50 hover:bg-surface-hover active:scale-95 text-text' : 'bg-surface/50 border-border/50 text-muted/50 pointer-events-none'}`}>
+                        {modulesUnlocked.srs ? <Icon name="layers" size={32} className="text-primary" /> : <Icon name="layers" size={32} className="opacity-50" />}
+                        <span className="font-semibold font-ethiopic">Review</span>
+                    </Link>
+                    <Link to="/vocab" className={`p-4 rounded-2xl border flex flex-col items-center justify-center gap-3 transition-all ${modulesUnlocked.vocab ? 'bg-surface border-border hover:border-primary/50 hover:bg-surface-hover active:scale-95 text-text' : 'bg-surface/50 border-border/50 text-muted/50 pointer-events-none'}`}>
+                        {modulesUnlocked.vocab ? <Icon name="book-open" size={32} className="text-secondary" /> : <Icon name="book-open" size={32} className="opacity-50" />}
+                        <span className="font-semibold font-ethiopic">Vocab</span>
+                    </Link>
+                    <Link to="/grammar" className={`p-4 rounded-2xl border flex flex-col items-center justify-center gap-3 transition-all ${modulesUnlocked.grammar ? 'bg-surface border-border hover:border-primary/50 hover:bg-surface-hover active:scale-95 text-text' : 'bg-surface/50 border-border/50 text-muted/50 pointer-events-none'}`}>
+                        {modulesUnlocked.grammar ? <Icon name="play" size={32} className="text-[#4CAF50]" /> : <Icon name="play" size={32} className="opacity-50" />}
+                        <span className="font-semibold font-ethiopic">Grammar</span>
+                    </Link>
+                    <Link to="/dialogue" className={`p-4 rounded-2xl border flex flex-col items-center justify-center gap-3 transition-all ${modulesUnlocked.dialogue ? 'bg-surface border-border hover:border-primary/50 hover:bg-surface-hover active:scale-95 text-text' : 'bg-surface/50 border-border/50 text-muted/50 pointer-events-none'}`}>
+                        {modulesUnlocked.dialogue ? <Icon name="message-circle" size={32} className="text-[#2196F3]" /> : <Icon name="message-circle" size={32} className="opacity-50" />}
+                        <span className="font-semibold font-ethiopic">Dialogues</span>
+                    </Link>
+                </div>
             </div>
         </div>
     )

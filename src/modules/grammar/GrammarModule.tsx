@@ -4,6 +4,7 @@ import grammarData from '@/data/grammar-exercises.json';
 import { getProgress, putProgress, getUserPrefs, putUserPrefs } from '@/lib/db';
 import EthiopicKeyboard from '@/components/EthiopicKeyboard';
 
+
 type Exercise = any;
 
 const allExercises = grammarData as Exercise[];
@@ -77,23 +78,23 @@ function ReorderExercise({ exercise, onComplete }: { exercise: Exercise, onCompl
                             key={wordIdx}
                             onMouseDown={() => setDragIdx(i)}
                             onTouchStart={() => setDragIdx(i)}
-                            className={`p-4 rounded-xl border-2 flex items-center justify-between cursor-grab transition-all ${isDragging
-                                ? 'bg-blue-50 dark:bg-blue-900/30 border-blue-400 z-10 shadow-lg scale-105'
-                                : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:border-blue-300 shadow-sm'
+                            className={`p-4 rounded-xl border flex items-center justify-between cursor-grab transition-all ${isDragging
+                                ? 'bg-primary/10 border-primary z-10 shadow-lg scale-105'
+                                : 'bg-surface border-border hover:border-primary/50 shadow-sm'
                                 }`}
                         >
                             <div className="flex flex-col">
-                                <span lang="am" className="text-xl fidel-char text-slate-900 dark:text-slate-100">{word.amharic}</span>
-                                <span className="text-sm text-slate-500">{word.transliteration}</span>
+                                <span lang="am" className="text-xl fidel-char text-text font-medium">{word.amharic}</span>
+                                <span className="text-sm text-muted">{word.transliteration}</span>
                             </div>
-                            <span className="text-sm font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700/50 px-3 py-1 rounded-lg">
+                            <span className="text-sm font-medium text-muted bg-bg px-3 py-1 rounded-lg border border-border">
                                 {word.english}
                             </span>
                         </div>
                     );
                 })}
             </div>
-            <button onClick={handleSubmit} className="py-4 rounded-xl font-bold bg-blue-600 hover:bg-blue-700 text-white transition-colors">
+            <button onClick={handleSubmit} className="py-4 rounded-xl font-bold bg-primary hover:bg-primary/90 text-white transition-colors shadow-lg shadow-primary/20">
                 Check Answer
             </button>
         </div>
@@ -111,26 +112,26 @@ function FillBlankExercise({ exercise, onComplete }: { exercise: Exercise, onCom
 
     return (
         <div className="flex flex-col gap-6">
-            <div lang="am" className="text-2xl text-center fidel-char bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl">
+            <div lang="am" className="text-2xl text-center fidel-char bg-surface p-6 rounded-2xl border border-border flex items-center justify-center flex-wrap gap-x-2 gap-y-4">
                 {exercise.sentence_amharic.split('____').map((part: string, i: number, arr: string[]) => (
                     <React.Fragment key={i}>
-                        {part}
+                        <span className="text-text">{part}</span>
                         {i < arr.length - 1 && (
-                            <span className="inline-block px-4 py-1 mx-2 border-b-2 border-blue-500 min-w-[80px] text-blue-600 dark:text-blue-400 font-bold min-h-[40px]">
+                            <span className="inline-block px-4 py-1 border-b-2 border-primary min-w-[80px] text-primary font-bold min-h-[40px] text-center bg-primary/5 rounded-t-sm">
                                 {input}
                             </span>
                         )}
                     </React.Fragment>
                 ))}
             </div>
-            <div className="text-center text-slate-500 mb-2">{exercise.sentence_english}</div>
+            <div className="text-center text-muted font-medium mb-2">{exercise.sentence_english}</div>
 
             <EthiopicKeyboard
                 onCharacter={c => setInput(prev => prev + c)}
                 onBackspace={() => setInput(prev => prev.slice(0, -1))}
             />
 
-            <button onClick={handleSubmit} className="py-4 rounded-xl font-bold bg-blue-600 hover:bg-blue-700 text-white transition-colors">
+            <button onClick={handleSubmit} className="py-4 rounded-xl font-bold bg-primary hover:bg-primary/90 text-white transition-colors shadow-lg shadow-primary/20">
                 Check Answer
             </button>
         </div>
@@ -147,25 +148,25 @@ function MultipleChoiceExercise({ exercise, onComplete }: { exercise: Exercise, 
 
     return (
         <div className="flex flex-col gap-6">
-            <div className="text-xl font-medium text-slate-900 dark:text-slate-100 mb-4">{exercise.question}</div>
+            <div className="text-xl font-medium text-text mb-4 text-center">{exercise.question}</div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {exercise.options.map((opt: string, i: number) => (
                     <button
                         key={i}
                         onClick={() => setSelected(i)}
-                        className={`p-4 rounded-xl border-2 text-left transition-all ${selected === i
-                            ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/30'
-                            : 'border-slate-200 dark:border-slate-700 hover:border-blue-300 bg-white dark:bg-slate-800'
+                        className={`p-4 rounded-xl border text-center sm:text-left transition-all ${selected === i
+                            ? 'border-primary bg-primary/10 shadow-sm ring-1 ring-primary/20'
+                            : 'border-border hover:border-primary/50 bg-surface'
                             }`}
                     >
-                        <span lang="am" className="text-xl fidel-char">{opt}</span>
+                        <span lang="am" className="text-xl fidel-char text-text font-medium">{opt}</span>
                     </button>
                 ))}
             </div>
             <button
                 disabled={selected === null}
                 onClick={handleSubmit}
-                className="py-4 rounded-xl font-bold bg-blue-600 hover:bg-blue-700 disabled:bg-slate-300 dark:disabled:bg-slate-700 text-white transition-colors"
+                className="py-4 rounded-xl font-bold bg-primary hover:bg-primary/90 disabled:bg-surface-hover disabled:text-muted disabled:border disabled:border-border text-white transition-colors shadow-lg shadow-primary/20"
             >
                 Check Answer
             </button>
@@ -203,7 +204,10 @@ function MatchPairsExercise({ exercise, onComplete }: { exercise: Exercise, onCo
 
     return (
         <div className="flex flex-col gap-6">
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-6 relative">
+                {/* Visual dividing line */}
+                <div className="hidden sm:block absolute left-1/2 top-4 bottom-4 w-px bg-border -translate-x-1/2 rounded-full"></div>
+
                 <div className="flex flex-col gap-3">
                     {leftIndices.map((i: number) => {
                         const isMatched = i in matches;
@@ -213,13 +217,13 @@ function MatchPairsExercise({ exercise, onComplete }: { exercise: Exercise, onCo
                                 key={`l-${i}`}
                                 disabled={isMatched}
                                 onClick={() => setLeftSelected(i)}
-                                className={`p-4 rounded-xl border-2 transition-all flex flex-col items-center ${isMatched ? 'opacity-0 invisible' :
-                                    isSelected ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/30 ring-2 ring-blue-300' :
-                                        'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800'
+                                className={`p-4 rounded-xl border transition-all flex flex-col items-center ${isMatched ? 'opacity-0 invisible' :
+                                    isSelected ? 'border-primary bg-primary/10 ring-1 ring-primary/20 shadow-sm' :
+                                        'border-border hover:border-primary/50 bg-surface shadow-sm'
                                     }`}
                             >
-                                <span lang="am" className="text-2xl fidel-char mb-1">{exercise.pairs[i].left}</span>
-                                <span className="text-xs text-slate-500">{exercise.pairs[i].left_gloss}</span>
+                                <span lang="am" className="text-2xl fidel-char mb-1 text-text">{exercise.pairs[i].left}</span>
+                                <span className="text-xs font-medium text-muted">{exercise.pairs[i].left_gloss}</span>
                             </button>
                         )
                     })}
@@ -233,13 +237,15 @@ function MatchPairsExercise({ exercise, onComplete }: { exercise: Exercise, onCo
                                 key={`r-${i}`}
                                 disabled={isMatched}
                                 onClick={() => setRightSelected(i)}
-                                className={`p-4 rounded-xl border-2 transition-all flex flex-col items-center ${isMatched ? 'opacity-0 invisible' :
-                                    isSelected ? 'border-amber-500 bg-amber-50 dark:bg-amber-900/30 ring-2 ring-amber-300' :
-                                        'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800'
+                                className={`p-4 rounded-xl border transition-all flex flex-col items-center justify-center min-h-[88px] ${isMatched ? 'opacity-0 invisible' :
+                                    isSelected ? 'border-secondary bg-secondary/10 ring-1 ring-secondary/20 shadow-sm' :
+                                        'border-border hover:border-secondary/50 bg-surface shadow-sm'
                                     }`}
                             >
-                                <span lang="am" className="text-2xl fidel-char mb-1">{exercise.pairs[i].right}</span>
-                                <span className="text-xs text-slate-500">{exercise.pairs[i].right_gloss}</span>
+                                <span lang="am" className="text-lg font-bold fidel-char text-text">{exercise.pairs[i].right}</span>
+                                {exercise.pairs[i].right_gloss && (
+                                    <span className="text-xs font-medium text-muted mt-1">{exercise.pairs[i].right_gloss}</span>
+                                )}
                             </button>
                         )
                     })}
@@ -248,7 +254,7 @@ function MatchPairsExercise({ exercise, onComplete }: { exercise: Exercise, onCo
             <button
                 disabled={Object.keys(matches).length !== exercise.pairs.length}
                 onClick={handleSubmit}
-                className="py-4 rounded-xl font-bold bg-blue-600 hover:bg-blue-700 disabled:bg-slate-300 dark:disabled:bg-slate-700 text-white transition-colors"
+                className="py-4 rounded-xl font-bold bg-primary hover:bg-primary/90 disabled:bg-surface-hover disabled:text-muted disabled:border disabled:border-border text-white transition-colors shadow-lg shadow-primary/20"
             >
                 Finish Match
             </button>

@@ -4,32 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-bg: #0f0f1a;
-  --color-surface: #1a1a2e;
-  --color-accent: #e94560;
-  --color-accent2: #0f3460;
-  --color-text: #eaeaea;
-  --color-muted: #8892a4;
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
-    /* We want to force dark mode anyway as per spec "app already uses dark defaults", but ensuring the vars remain dark */
-    --color-bg: #0f0f1a;
-    --color-surface: #1a1a2e;
-    --color-accent: #e94560;
-    --color-accent2: #0f3460;
-    --color-text: #eaeaea;
-    --color-muted: #8892a4;
+    --color-bg: #0D0F12;
+    --color-surface: #1C1E26;
+    --color-surface-hover: #2A2D39;
+    --color-primary: #E63946;
+    --color-secondary: #F4A261;
+    --color-text: #F3F4F6;
+    --color-muted: #9CA3AF;
+    --color-border: #2D313E;
   }
-}
 
-body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  font-family: 'Noto Sans Ethiopic', system-ui, sans-serif;
-  min-height: 100vh;
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Noto Sans Ethiopic', system-ui, sans-serif;
+    min-height: 100vh;
+  }
 }
 
 .fidel-char {
