@@ -1,0 +1,858 @@
+[
+  {
+    "id": "dial_001",
+    "title": "Coffee Shop Greeting",
+    "title_amharic": "ቡና ቤት — ሰላምታ",
+    "scenario": "Ordering coffee at a bunna bet",
+    "audio_key_prefix": "dial_001",
+    "lines": [
+      {
+        "line_index": 0,
+        "speaker": "A",
+        "amharic": "ሰላም! ወደ ቡና ቤት እንኳን ደህና መጡ።",
+        "english": "Hello! Welcome to the coffee house.",
+        "transliteration": "Selam! Wede bunna bet enkwan dehna mettu.",
+        "audio_key": "dial_001_line_000",
+        "is_production_point": false
+      },
+      {
+        "line_index": 1,
+        "speaker": "B",
+        "amharic": "አመሰግናለሁ። አንድ ቡና እፈልጋለሁ።",
+        "english": "Thank you. I want one coffee.",
+        "transliteration": "Ameseggenallehu. And bunna ifelligalhu.",
+        "audio_key": "dial_001_line_001",
+        "is_production_point": true,
+        "production_options": [
+          {
+            "amharic": "አንድ ቡና እፈልጋለሁ።",
+            "english": "I want one coffee.",
+            "correct": true
+          },
+          {
+            "amharic": "አልፈልግም።",
+            "english": "I do not want any.",
+            "correct": false
+          },
+          {
+            "amharic": "ሁለት ታክሲ እፈልጋለሁ።",
+            "english": "I want two taxis.",
+            "correct": false
+          },
+          {
+            "amharic": "ፖስታ ቤት የት ነው?",
+            "english": "Where is the post office?",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "line_index": 2,
+        "speaker": "A",
+        "amharic": "ስኳር ትፈልጋለህ?",
+        "english": "Do you want sugar?",
+        "transliteration": "Sukar tifelligaleh?",
+        "audio_key": "dial_001_line_002",
+        "is_production_point": false
+      },
+      {
+        "line_index": 3,
+        "speaker": "B",
+        "amharic": "አዎ፣ ትንሽ ስኳር እባክዎ።",
+        "english": "Yes, a little sugar please.",
+        "transliteration": "Awo, tinish sukar ibakwo.",
+        "audio_key": "dial_001_line_003",
+        "is_production_point": false
+      },
+      {
+        "line_index": 4,
+        "speaker": "A",
+        "amharic": "እንጀራ ወይስ ኬክ ትፈልጋለህ?",
+        "english": "Would you like injera or cake?",
+        "transliteration": "Enjjerra weyis kek tifelligaleh?",
+        "audio_key": "dial_001_line_004",
+        "is_production_point": false
+      },
+      {
+        "line_index": 5,
+        "speaker": "B",
+        "amharic": "አልፈልግም፤ ቡናው ብቻ ይበቃል።",
+        "english": "No thanks, the coffee alone is enough.",
+        "transliteration": "Alfelliggim; bunnaw bicha yibeqal.",
+        "audio_key": "dial_001_line_005",
+        "is_production_point": false
+      }
+    ],
+    "comprehension_questions": [
+      {
+        "question_en": "What does speaker B order?",
+        "options": [
+          "Tea",
+          "Coffee",
+          "Water",
+          "Taxi"
+        ],
+        "correct_index": 1
+      },
+      {
+        "question_en": "Does B ask for sugar?",
+        "options": [
+          "Yes",
+          "No",
+          "Only water",
+          "Only cake"
+        ],
+        "correct_index": 0
+      }
+    ]
+  },
+  {
+    "id": "dial_002",
+    "title": "Directions to the Post Office",
+    "title_amharic": "መንገድ መጠየቅ — ፖስታ ቤት",
+    "scenario": "Asking for directions to the post office",
+    "audio_key_prefix": "dial_002",
+    "lines": [
+      {
+        "line_index": 0,
+        "speaker": "A",
+        "amharic": "ይቅርታ፣ ፖስታ ቤቱ የት ነው?",
+        "english": "Excuse me, where is the post office?",
+        "transliteration": "Yikirta, posta betu yet new?",
+        "audio_key": "dial_002_line_000",
+        "is_production_point": false
+      },
+      {
+        "line_index": 1,
+        "speaker": "B",
+        "amharic": "ቀጥታ ሂድ፣ ከዚያ በግራ ዞር።",
+        "english": "Go straight, then turn left.",
+        "transliteration": "Qetteta hid, keziya begra zor.",
+        "audio_key": "dial_002_line_001",
+        "is_production_point": true,
+        "production_options": [
+          {
+            "amharic": "ቀጥታ ሂድ፣ ከዚያ በግራ ዞር።",
+            "english": "Go straight, then turn left.",
+            "correct": true
+          },
+          {
+            "amharic": "ቤት ተመለስ።",
+            "english": "Go back home.",
+            "correct": false
+          },
+          {
+            "amharic": "ታክሲ ጠራ።",
+            "english": "Call a taxi.",
+            "correct": false
+          },
+          {
+            "amharic": "ምግብ ብላ።",
+            "english": "Eat food.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "line_index": 2,
+        "speaker": "A",
+        "amharic": "ሩቅ ነው?",
+        "english": "Is it far?",
+        "transliteration": "Ruq new?",
+        "audio_key": "dial_002_line_002",
+        "is_production_point": false
+      },
+      {
+        "line_index": 3,
+        "speaker": "B",
+        "amharic": "አይ፣ ቅርብ ነው። መብራቱን ከፊትህ ታያለህ።",
+        "english": "No, it is near. You will see the traffic light in front of you.",
+        "transliteration": "Ay, qereb new. Mebiratun kefiteh tayaleh.",
+        "audio_key": "dial_002_line_003",
+        "is_production_point": false
+      },
+      {
+        "line_index": 4,
+        "speaker": "A",
+        "amharic": "በጣም አመሰግናለሁ።",
+        "english": "Thank you very much.",
+        "transliteration": "Betam ameseggenallehu.",
+        "audio_key": "dial_002_line_004",
+        "is_production_point": false
+      },
+      {
+        "line_index": 5,
+        "speaker": "B",
+        "amharic": "እንኳን ደህና ሂድ።",
+        "english": "Go safely.",
+        "transliteration": "Enkwan dehna hid.",
+        "audio_key": "dial_002_line_005",
+        "is_production_point": false
+      }
+    ],
+    "comprehension_questions": [
+      {
+        "question_en": "Which direction does B give first?",
+        "options": [
+          "Turn right",
+          "Go straight",
+          "Take a taxi",
+          "Stop"
+        ],
+        "correct_index": 1
+      },
+      {
+        "question_en": "Is the post office far?",
+        "options": [
+          "Yes",
+          "No",
+          "Unknown",
+          "Only by taxi"
+        ],
+        "correct_index": 1
+      }
+    ]
+  },
+  {
+    "id": "dial_003",
+    "title": "Market Purchase",
+    "title_amharic": "ገበያ — ምግብ መግዛት",
+    "scenario": "Buying food at a market with numbers and prices",
+    "audio_key_prefix": "dial_003",
+    "lines": [
+      {
+        "line_index": 0,
+        "speaker": "A",
+        "amharic": "ሰላም፣ እንጀራ ስንት ነው?",
+        "english": "Hello, how much is injera?",
+        "transliteration": "Selam, enjjerra sint new?",
+        "audio_key": "dial_003_line_000",
+        "is_production_point": false
+      },
+      {
+        "line_index": 1,
+        "speaker": "B",
+        "amharic": "አንድ እንጀራ ሃያ ብር ነው።",
+        "english": "One injera is twenty birr.",
+        "transliteration": "And enjjerra haya birr new.",
+        "audio_key": "dial_003_line_001",
+        "is_production_point": false
+      },
+      {
+        "line_index": 2,
+        "speaker": "A",
+        "amharic": "አምስት እንጀራዎችን እፈልጋለሁ።",
+        "english": "I want five injeras.",
+        "transliteration": "Ammist enjjerawochin ifelligalhu.",
+        "audio_key": "dial_003_line_002",
+        "is_production_point": true,
+        "production_options": [
+          {
+            "amharic": "አምስት እንጀራዎችን እፈልጋለሁ።",
+            "english": "I want five injeras.",
+            "correct": true
+          },
+          {
+            "amharic": "አንድ ታክሲ እፈልጋለሁ።",
+            "english": "I want one taxi.",
+            "correct": false
+          },
+          {
+            "amharic": "ቡና አልፈልግም።",
+            "english": "I do not want coffee.",
+            "correct": false
+          },
+          {
+            "amharic": "ሁለት ቀን እቆያለሁ።",
+            "english": "I will stay two days.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "line_index": 3,
+        "speaker": "B",
+        "amharic": "ጠቅላላው መቶ ብር ነው።",
+        "english": "The total is one hundred birr.",
+        "transliteration": "Teqlalayaw meto birr new.",
+        "audio_key": "dial_003_line_003",
+        "is_production_point": false
+      },
+      {
+        "line_index": 4,
+        "speaker": "A",
+        "amharic": "ጥብስ እና ሽሮ አለ?",
+        "english": "Do you have tibs and shiro?",
+        "transliteration": "Tibbs ena shiro ale?",
+        "audio_key": "dial_003_line_004",
+        "is_production_point": false
+      },
+      {
+        "line_index": 5,
+        "speaker": "B",
+        "amharic": "አዎ፣ ሁለቱም አሉ።",
+        "english": "Yes, both are available.",
+        "transliteration": "Awo, huletum alu.",
+        "audio_key": "dial_003_line_005",
+        "is_production_point": false
+      }
+    ],
+    "comprehension_questions": [
+      {
+        "question_en": "How many injeras does A ask for?",
+        "options": [
+          "One",
+          "Two",
+          "Five",
+          "Ten"
+        ],
+        "correct_index": 2
+      },
+      {
+        "question_en": "What is the total price?",
+        "options": [
+          "20 birr",
+          "50 birr",
+          "100 birr",
+          "200 birr"
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  {
+    "id": "dial_004",
+    "title": "Introduction Conversation",
+    "title_amharic": "መተዋወቅ — ስም እና ሀገር",
+    "scenario": "Introducing name, origin, and occupation",
+    "audio_key_prefix": "dial_004",
+    "lines": [
+      {
+        "line_index": 0,
+        "speaker": "A",
+        "amharic": "ሰላም፣ ስምህ ማን ነው?",
+        "english": "Hello, what is your name?",
+        "transliteration": "Selam, simih man new?",
+        "audio_key": "dial_004_line_000",
+        "is_production_point": false
+      },
+      {
+        "line_index": 1,
+        "speaker": "B",
+        "amharic": "ስሜ ሳራ ነው። ያንተስ?",
+        "english": "My name is Sara. And yours?",
+        "transliteration": "Sime Sara new. Yantes?",
+        "audio_key": "dial_004_line_001",
+        "is_production_point": false
+      },
+      {
+        "line_index": 2,
+        "speaker": "A",
+        "amharic": "ስሜ ዳዊት ነው። ከየት ነሽ?",
+        "english": "My name is Dawit. Where are you from? (to a woman)",
+        "transliteration": "Sime Dawit new. Keyet nesh?",
+        "audio_key": "dial_004_line_002",
+        "is_production_point": false
+      },
+      {
+        "line_index": 3,
+        "speaker": "B",
+        "amharic": "ከአዲስ አበባ ነኝ። አንተ ከየት ነህ?",
+        "english": "I am from Addis Ababa. Where are you from? (to a man)",
+        "transliteration": "KeAddis Abeba neny. Ante keyet neh?",
+        "audio_key": "dial_004_line_003",
+        "is_production_point": false
+      },
+      {
+        "line_index": 4,
+        "speaker": "A",
+        "amharic": "ከአሜሪካ ነኝ። ሥራሽ ምንድን ነው?",
+        "english": "I am from America. What is your work? (to a woman)",
+        "transliteration": "KeAmerika neny. Sirash mindin new?",
+        "audio_key": "dial_004_line_004",
+        "is_production_point": true,
+        "production_options": [
+          {
+            "amharic": "ሥራሽ ምንድን ነው?",
+            "english": "What is your work? (to a woman)",
+            "correct": true
+          },
+          {
+            "amharic": "ቡና ስንት ነው?",
+            "english": "How much is coffee?",
+            "correct": false
+          },
+          {
+            "amharic": "ወደ ገበያ እንሂድ።",
+            "english": "Let us go to the market.",
+            "correct": false
+          },
+          {
+            "amharic": "ትናንት መጣሁ።",
+            "english": "I came yesterday.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "line_index": 5,
+        "speaker": "B",
+        "amharic": "ተማሪ ነኝ።",
+        "english": "I am a student.",
+        "transliteration": "Temari neny.",
+        "audio_key": "dial_004_line_005",
+        "is_production_point": false
+      }
+    ],
+    "comprehension_questions": [
+      {
+        "question_en": "Where is speaker B from?",
+        "options": [
+          "Addis Ababa",
+          "Bahir Dar",
+          "America",
+          "Asmara"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question_en": "What is B’s occupation?",
+        "options": [
+          "Teacher",
+          "Driver",
+          "Student",
+          "Cook"
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  {
+    "id": "dial_005",
+    "title": "Greeting Elders",
+    "title_amharic": "አዋቂዎችን ሰላምታ መስጠት",
+    "scenario": "Using formal register with elders",
+    "audio_key_prefix": "dial_005",
+    "lines": [
+      {
+        "line_index": 0,
+        "speaker": "A",
+        "amharic": "ሰላም አያት።",
+        "english": "Hello, grandfather.",
+        "transliteration": "Selam ayyat.",
+        "audio_key": "dial_005_line_000",
+        "is_production_point": false
+      },
+      {
+        "line_index": 1,
+        "speaker": "B",
+        "amharic": "ጤና ይስጥልኝ ልጄ።",
+        "english": "Formal greeting, my child.",
+        "transliteration": "Tena yistellign lijje.",
+        "audio_key": "dial_005_line_001",
+        "is_production_point": false
+      },
+      {
+        "line_index": 2,
+        "speaker": "A",
+        "amharic": "ጤና ይስጥልኝ አባት። እንደምን አደሩ?",
+        "english": "Formal greeting, father. How did you spend the night? (polite)",
+        "transliteration": "Tena yistellign abbat. Endet aderu?",
+        "audio_key": "dial_005_line_002",
+        "is_production_point": true,
+        "production_options": [
+          {
+            "amharic": "እንደምን አደሩ?",
+            "english": "How are you? (polite)",
+            "correct": true
+          },
+          {
+            "amharic": "ደህና ነህ?",
+            "english": "Are you well? (to a man)",
+            "correct": false
+          },
+          {
+            "amharic": "ምግብ አለ?",
+            "english": "Is there food?",
+            "correct": false
+          },
+          {
+            "amharic": "በግራ ዞር።",
+            "english": "Turn left.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "line_index": 3,
+        "speaker": "B",
+        "amharic": "ደህና ነን፣ አንተ ደህና ነህ?",
+        "english": "We are well; are you well?",
+        "transliteration": "Dehna nen, ante dehna neh?",
+        "audio_key": "dial_005_line_003",
+        "is_production_point": false
+      },
+      {
+        "line_index": 4,
+        "speaker": "A",
+        "amharic": "ደህና ነኝ። አመሰግናለሁ።",
+        "english": "I am well. Thank you.",
+        "transliteration": "Dehna neny. Ameseggenallehu.",
+        "audio_key": "dial_005_line_004",
+        "is_production_point": false
+      },
+      {
+        "line_index": 5,
+        "speaker": "B",
+        "amharic": "መልካም ቀን ይሁንልህ።",
+        "english": "May you have a good day.",
+        "transliteration": "Melkam qen yihunilih.",
+        "audio_key": "dial_005_line_005",
+        "is_production_point": false
+      }
+    ],
+    "comprehension_questions": [
+      {
+        "question_en": "Which formal greeting appears in this dialogue?",
+        "options": [
+          "ቻው",
+          "ጤና ይስጥልኝ",
+          "እንግሊዝኛ",
+          "ወደ"
+        ],
+        "correct_index": 1
+      },
+      {
+        "question_en": "Who is being greeted respectfully?",
+        "options": [
+          "A child",
+          "A taxi driver",
+          "An elder",
+          "A waiter"
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  {
+    "id": "dial_006",
+    "title": "Taking a Taxi",
+    "title_amharic": "ታክሲ መያዝ",
+    "scenario": "Discussing destination and fare",
+    "audio_key_prefix": "dial_006",
+    "lines": [
+      {
+        "line_index": 0,
+        "speaker": "A",
+        "amharic": "ታክሲ! ወደ ቦሌ ኤርፖርት እንሂድ።",
+        "english": "Taxi! Let us go to Bole Airport.",
+        "transliteration": "Taksi! Wede Bole erport enhid.",
+        "audio_key": "dial_006_line_000",
+        "is_production_point": false
+      },
+      {
+        "line_index": 1,
+        "speaker": "B",
+        "amharic": "እሺ፣ ዋጋው ሦስት መቶ ብር ነው።",
+        "english": "Okay, the price is three hundred birr.",
+        "transliteration": "Ishi, wagaw sost meto birr new.",
+        "audio_key": "dial_006_line_001",
+        "is_production_point": false
+      },
+      {
+        "line_index": 2,
+        "speaker": "A",
+        "amharic": "ብዙ ነው፤ ሁለት መቶ አይሆንም?",
+        "english": "That is too much; can it be two hundred?",
+        "transliteration": "Bizu new; hulet meto ayhonim?",
+        "audio_key": "dial_006_line_002",
+        "is_production_point": true,
+        "production_options": [
+          {
+            "amharic": "ሁለት መቶ አይሆንም?",
+            "english": "Can it be two hundred?",
+            "correct": true
+          },
+          {
+            "amharic": "አምስት እንጀራ እፈልጋለሁ።",
+            "english": "I want five injeras.",
+            "correct": false
+          },
+          {
+            "amharic": "ደህና እደር።",
+            "english": "Sleep well.",
+            "correct": false
+          },
+          {
+            "amharic": "ቀዩ መኪና ነው።",
+            "english": "It is the red car.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "line_index": 3,
+        "speaker": "B",
+        "amharic": "እሺ፣ ሁለት መቶ ሃምሳ ብር ይሁን።",
+        "english": "Okay, let it be two hundred fifty birr.",
+        "transliteration": "Ishi, hulet meto hamsa birr yihun.",
+        "audio_key": "dial_006_line_003",
+        "is_production_point": false
+      },
+      {
+        "line_index": 4,
+        "speaker": "A",
+        "amharic": "ተስማምቻለሁ። በፍጥነት እንሂድ።",
+        "english": "Agreed. Let us go quickly.",
+        "transliteration": "Tesmamichalehu. Befitinet enhid.",
+        "audio_key": "dial_006_line_004",
+        "is_production_point": false
+      },
+      {
+        "line_index": 5,
+        "speaker": "B",
+        "amharic": "እንግዲህ ቁርጥ መንገድ እወስዳለሁ።",
+        "english": "Then I will take a short route.",
+        "transliteration": "Engidih qurit mengedd ewesdalhu.",
+        "audio_key": "dial_006_line_005",
+        "is_production_point": false
+      }
+    ],
+    "comprehension_questions": [
+      {
+        "question_en": "What destination is mentioned?",
+        "options": [
+          "Post office",
+          "Restaurant",
+          "Bole Airport",
+          "Market"
+        ],
+        "correct_index": 2
+      },
+      {
+        "question_en": "What fare do they finally agree on?",
+        "options": [
+          "100 birr",
+          "200 birr",
+          "250 birr",
+          "300 birr"
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  {
+    "id": "dial_007",
+    "title": "Restaurant Order",
+    "title_amharic": "ምግብ ቤት — ትእዛዝ እና ሂሳብ",
+    "scenario": "Ordering injera and tibs, then asking for the bill",
+    "audio_key_prefix": "dial_007",
+    "lines": [
+      {
+        "line_index": 0,
+        "speaker": "A",
+        "amharic": "ሰላም፣ ምን ትዘዛለህ?",
+        "english": "Hello, what would you like to order?",
+        "transliteration": "Selam, min tizazzaleh?",
+        "audio_key": "dial_007_line_000",
+        "is_production_point": false
+      },
+      {
+        "line_index": 1,
+        "speaker": "B",
+        "amharic": "አንድ እንጀራ እና ጥብስ እባክዎ።",
+        "english": "One injera and tibs, please.",
+        "transliteration": "And enjjerra ena tibbs ibakwo.",
+        "audio_key": "dial_007_line_001",
+        "is_production_point": false
+      },
+      {
+        "line_index": 2,
+        "speaker": "A",
+        "amharic": "መጠጥ ምን ትፈልጋለህ?",
+        "english": "What drink would you like?",
+        "transliteration": "Metett min tifelligaleh?",
+        "audio_key": "dial_007_line_002",
+        "is_production_point": false
+      },
+      {
+        "line_index": 3,
+        "speaker": "B",
+        "amharic": "ውሃ እና አንድ ቡና እፈልጋለሁ።",
+        "english": "I want water and one coffee.",
+        "transliteration": "Wuha ena and bunna ifelligalhu.",
+        "audio_key": "dial_007_line_003",
+        "is_production_point": false
+      },
+      {
+        "line_index": 4,
+        "speaker": "A",
+        "amharic": "ሌላ አለ?",
+        "english": "Anything else?",
+        "transliteration": "Lela ale?",
+        "audio_key": "dial_007_line_004",
+        "is_production_point": false
+      },
+      {
+        "line_index": 5,
+        "speaker": "B",
+        "amharic": "አይ፣ ሂሳቡን እባክዎ።",
+        "english": "No, the bill please.",
+        "transliteration": "Ay, hisabun ibakwo.",
+        "audio_key": "dial_007_line_005",
+        "is_production_point": true,
+        "production_options": [
+          {
+            "amharic": "ሂሳቡን እባክዎ።",
+            "english": "The bill please.",
+            "correct": true
+          },
+          {
+            "amharic": "ፖስታ ቤቱ የት ነው?",
+            "english": "Where is the post office?",
+            "correct": false
+          },
+          {
+            "amharic": "አልፈልግም።",
+            "english": "I do not want any.",
+            "correct": false
+          },
+          {
+            "amharic": "ታክሲ በግራ ነው።",
+            "english": "The taxi is on the left.",
+            "correct": false
+          }
+        ]
+      }
+    ],
+    "comprehension_questions": [
+      {
+        "question_en": "Which food item is ordered?",
+        "options": [
+          "Shiro only",
+          "Injera and tibs",
+          "Tea only",
+          "Fish"
+        ],
+        "correct_index": 1
+      },
+      {
+        "question_en": "What does speaker B ask for at the end?",
+        "options": [
+          "Water",
+          "Menu",
+          "Bill",
+          "Taxi"
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  {
+    "id": "dial_008",
+    "title": "Goodbye Variants",
+    "title_amharic": "መሰናበት — መደበኛ እና መክበር",
+    "scenario": "Saying goodbye with formal and informal variants",
+    "audio_key_prefix": "dial_008",
+    "lines": [
+      {
+        "line_index": 0,
+        "speaker": "A",
+        "amharic": "እሺ፣ ዛሬ በቂ ነው።",
+        "english": "Okay, that is enough for today.",
+        "transliteration": "Ishi, zare beqi new.",
+        "audio_key": "dial_008_line_000",
+        "is_production_point": false
+      },
+      {
+        "line_index": 1,
+        "speaker": "B",
+        "amharic": "አዎ፣ ደህና ሁን!",
+        "english": "Yes, goodbye! (to a man)",
+        "transliteration": "Awo, dehna hun!",
+        "audio_key": "dial_008_line_001",
+        "is_production_point": false
+      },
+      {
+        "line_index": 2,
+        "speaker": "A",
+        "amharic": "አንቺም ደህና ሁኚ። ነገ እንገናኛለን።",
+        "english": "You too, goodbye. We will meet tomorrow.",
+        "transliteration": "Anchim dehna huni. Negge engenanyalen.",
+        "audio_key": "dial_008_line_002",
+        "is_production_point": false
+      },
+      {
+        "line_index": 3,
+        "speaker": "B",
+        "amharic": "መልካም ሌሊት።",
+        "english": "Good night.",
+        "transliteration": "Melkam lelitt.",
+        "audio_key": "dial_008_line_003",
+        "is_production_point": false
+      },
+      {
+        "line_index": 4,
+        "speaker": "A",
+        "amharic": "ለአባትህ እና ለእናትሽ ጤና ይስጥልኝ በይ።",
+        "english": "Say formal greetings to your father and mother.",
+        "transliteration": "Leabbatih ena leennatish tena yistellign bey.",
+        "audio_key": "dial_008_line_004",
+        "is_production_point": false
+      },
+      {
+        "line_index": 5,
+        "speaker": "B",
+        "amharic": "እንደዚያ አደርጋለሁ፣ ደህና እደር።",
+        "english": "I will do that, sleep well.",
+        "transliteration": "Endeziya adergalhu, dehna eder.",
+        "audio_key": "dial_008_line_005",
+        "is_production_point": true,
+        "production_options": [
+          {
+            "amharic": "ደህና እደር።",
+            "english": "Sleep well.",
+            "correct": true
+          },
+          {
+            "amharic": "ቡና እፈልጋለሁ።",
+            "english": "I want coffee.",
+            "correct": false
+          },
+          {
+            "amharic": "በግራ ዞር።",
+            "english": "Turn left.",
+            "correct": false
+          },
+          {
+            "amharic": "ገበያው ቅርብ ነው።",
+            "english": "The market is near.",
+            "correct": false
+          }
+        ]
+      }
+    ],
+    "comprehension_questions": [
+      {
+        "question_en": "Which informal goodbye appears?",
+        "options": [
+          "ጤና ይስጥልኝ",
+          "ደህና ሁን",
+          "እባክዎ",
+          "አመሰግናለሁ"
+        ],
+        "correct_index": 1
+      },
+      {
+        "question_en": "What day do they plan to meet?",
+        "options": [
+          "Yesterday",
+          "Today",
+          "Tomorrow",
+          "Next week"
+        ],
+        "correct_index": 2
+      }
+    ]
+  }
+]

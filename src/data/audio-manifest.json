@@ -1,0 +1,1561 @@
+{
+  "_meta": {
+    "generated_by": "Codex Thread 7",
+    "purpose": "Master list of all audio_key values needed by the app. Feed this into forced alignment or recording workflows.",
+    "clip_naming_convention": "vocab_{word} | dial_u{unit:02d}_line_{index:03d} | dial_{dialogue_id}_line_{index:03d} | char_{consonant}_ord{order}",
+    "source_values": {
+      "fsi_clip": "Producible from FSI recordings via alignment pipeline — clip does not exist yet but source audio does",
+      "new_recording_needed": "No reliable FSI source exists — must be recorded by a native speaker",
+      "espeak_fallback": "No recording planned for v1 — runtime fallback to eSpeak-NG WASM"
+    }
+  },
+  "vocab_keys": [
+    {
+      "audio_key": "vocab_selam",
+      "word_english": "hello / peace",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_endet_aderk",
+      "word_english": "how did you spend the night? (to a man)",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_endet_adersh",
+      "word_english": "how did you spend the night? (to a woman)",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_dehna_neh",
+      "word_english": "are you well? (to a man)",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_dehna_nesh",
+      "word_english": "are you well? (to a woman)",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_dehna_neny",
+      "word_english": "I am well",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_tena_yistellign",
+      "word_english": "formal greeting (may health be given to me)",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_ameseggenallehu",
+      "word_english": "thank you",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_yikirta",
+      "word_english": "excuse me / sorry",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_ibakkih",
+      "word_english": "please (to a man)",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_ibakkish",
+      "word_english": "please (to a woman)",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_enkwan_dehna_mettah",
+      "word_english": "welcome (to a man)",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_enkwan_dehna_mettash",
+      "word_english": "welcome (to a woman)",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_melkam_qen",
+      "word_english": "good day",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_melkam_mishshit",
+      "word_english": "good evening",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_dehna_hun",
+      "word_english": "goodbye (to a man)",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_dehna_huni",
+      "word_english": "goodbye (to a woman)",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_engenany",
+      "word_english": "see you",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_dehna_eder",
+      "word_english": "sleep well (to a man)",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_dehna_ederi",
+      "word_english": "sleep well (to a woman)",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_endet_nesh",
+      "word_english": "how are you? (to a woman)",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_and",
+      "word_english": "one",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_hulet",
+      "word_english": "two",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_sost",
+      "word_english": "three",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_arat",
+      "word_english": "four",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_ammist",
+      "word_english": "five",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_siddist",
+      "word_english": "six",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_sebat",
+      "word_english": "seven",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_simmint",
+      "word_english": "eight",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_zetegn",
+      "word_english": "nine",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_asir",
+      "word_english": "ten",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_asra_and",
+      "word_english": "ten one",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_asra_hulet",
+      "word_english": "ten two",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_asra_sost",
+      "word_english": "ten three",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_asra_arat",
+      "word_english": "ten four",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_asra_ammist",
+      "word_english": "ten five",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_asra_siddist",
+      "word_english": "ten six",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_asra_sebat",
+      "word_english": "ten seven",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_asra_simmint",
+      "word_english": "ten eight",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_asra_zetegn",
+      "word_english": "ten nine",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_haya",
+      "word_english": "twenty",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_selasa",
+      "word_english": "thirty",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_arba",
+      "word_english": "forty",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_hamsa",
+      "word_english": "fifty",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_silsa",
+      "word_english": "sixty",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_seba",
+      "word_english": "seventy",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_semanya",
+      "word_english": "eighty",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_zetena",
+      "word_english": "ninety",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto",
+      "word_english": "one hundred",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_shih",
+      "word_english": "one thousand",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_abbat",
+      "word_english": "father",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_ennat",
+      "word_english": "mother",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_wendimm",
+      "word_english": "brother",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_ihit",
+      "word_english": "sister",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_lijj",
+      "word_english": "child",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_lijjoch",
+      "word_english": "children",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_bal",
+      "word_english": "husband",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_mist",
+      "word_english": "wife",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_ayyat",
+      "word_english": "grandfather",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_eme_ayyat",
+      "word_english": "grandmother",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_agot",
+      "word_english": "uncle",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_akist",
+      "word_english": "aunt",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_yeabbat_wendimm",
+      "word_english": "paternal uncle",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_yeennat_ihit",
+      "word_english": "maternal aunt",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_wend_lijj",
+      "word_english": "son",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_set_lijj",
+      "word_english": "daughter",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_beteseb",
+      "word_english": "family",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_zemed",
+      "word_english": "relative",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_abbatoch",
+      "word_english": "fathers",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_ennatoch",
+      "word_english": "mothers",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_bunna",
+      "word_english": "coffee",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_shay",
+      "word_english": "tea",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_wuha",
+      "word_english": "water",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_sukar",
+      "word_english": "sugar",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_enjjerra",
+      "word_english": "injera",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_doro_wot",
+      "word_english": "chicken stew",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_shiro",
+      "word_english": "chickpea stew",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_tibbs",
+      "word_english": "grilled meat",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_tejj",
+      "word_english": "honey wine (tej)",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_dabo",
+      "word_english": "bread loaf",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_wetet",
+      "word_english": "milk",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_qememm",
+      "word_english": "spice",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_atkilt",
+      "word_english": "vegetable",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_frafre",
+      "word_english": "fruit",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_ruz",
+      "word_english": "rice",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_segga",
+      "word_english": "meat",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_migibb",
+      "word_english": "food / meal",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_mankiya",
+      "word_english": "spoon",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_sahin",
+      "word_english": "plate",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_hisab",
+      "word_english": "bill / check",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_wede",
+      "word_english": "toward",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_qereb",
+      "word_english": "near",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_ruq",
+      "word_english": "far",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_befit",
+      "word_english": "in front of",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_behwala",
+      "word_english": "behind / after",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_begra",
+      "word_english": "on the left",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_beqeny",
+      "word_english": "on the right",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_qetteta",
+      "word_english": "straight ahead",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_zor",
+      "word_english": "turn",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_mengedd",
+      "word_english": "road / way",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_posta_bet",
+      "word_english": "post office",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_mewcha",
+      "word_english": "exit",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_megbiya",
+      "word_english": "entrance",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_dildiyy",
+      "word_english": "bridge",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_kezih",
+      "word_english": "from here",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_ezzih",
+      "word_english": "here",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_ezziya",
+      "word_english": "there",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_mebirat",
+      "word_english": "traffic light",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_adebabayy",
+      "word_english": "square / plaza",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_teyyik",
+      "word_english": "ask",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_qeyy",
+      "word_english": "red",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_tiqur",
+      "word_english": "black",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_nechch",
+      "word_english": "white",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_arengwade",
+      "word_english": "green",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_semayawi",
+      "word_english": "blue",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_bichcha",
+      "word_english": "yellow",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_birtukanama",
+      "word_english": "orange",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_bunnama",
+      "word_english": "brown",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_hamrawi",
+      "word_english": "purple",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_roz",
+      "word_english": "pink",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_gracha",
+      "word_english": "gray",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_werkama",
+      "word_english": "golden",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_birma",
+      "word_english": "silver",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_qelem",
+      "word_english": "color",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_qeyy_qelem",
+      "word_english": "red color",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_tiqur_qelem",
+      "word_english": "black color",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_nechch_qelem",
+      "word_english": "white color",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_arengwade_qelem",
+      "word_english": "green color",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_semayawi_qelem",
+      "word_english": "blue color",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_birruh",
+      "word_english": "bright",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_senyo",
+      "word_english": "Monday",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_maksenyo",
+      "word_english": "Tuesday",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_rebue",
+      "word_english": "Wednesday",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_hamus",
+      "word_english": "Thursday",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_arb",
+      "word_english": "Friday",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_qedame",
+      "word_english": "Saturday",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_ehud",
+      "word_english": "Sunday",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_zare",
+      "word_english": "today",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_negge",
+      "word_english": "tomorrow",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_tinant",
+      "word_english": "yesterday",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_samint",
+      "word_english": "week",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_qen",
+      "word_english": "day",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_tewat",
+      "word_english": "morning",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_keseat",
+      "word_english": "afternoon",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_mishshit",
+      "word_english": "evening",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_lelitt",
+      "word_english": "night",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_yesamint_mecheresha",
+      "word_english": "weekend",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_yesira_qen",
+      "word_english": "workday",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_bezih_samint",
+      "word_english": "this week",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_bemmiqetelew_samint",
+      "word_english": "next week",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_haya_and",
+      "word_english": "twenty-one",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_haya_hulet",
+      "word_english": "twenty-two",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_haya_sost",
+      "word_english": "twenty-three",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_haya_arat",
+      "word_english": "twenty-four",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_haya_ammist",
+      "word_english": "twenty-five",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_haya_siddist",
+      "word_english": "twenty-six",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_haya_sebat",
+      "word_english": "twenty-seven",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_haya_simmint",
+      "word_english": "twenty-eight",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_haya_zetegn",
+      "word_english": "twenty-nine",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_selasa_2",
+      "word_english": "thirty",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_selasa_and",
+      "word_english": "thirty-one",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_selasa_hulet",
+      "word_english": "thirty-two",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_selasa_sost",
+      "word_english": "thirty-three",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_selasa_arat",
+      "word_english": "thirty-four",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_selasa_ammist",
+      "word_english": "thirty-five",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_selasa_siddist",
+      "word_english": "thirty-six",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_selasa_sebat",
+      "word_english": "thirty-seven",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_selasa_simmint",
+      "word_english": "thirty-eight",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_selasa_zetegn",
+      "word_english": "thirty-nine",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_arba_2",
+      "word_english": "forty",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_arba_and",
+      "word_english": "forty-one",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_arba_hulet",
+      "word_english": "forty-two",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_arba_sost",
+      "word_english": "forty-three",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_arba_arat",
+      "word_english": "forty-four",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_arba_ammist",
+      "word_english": "forty-five",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_arba_siddist",
+      "word_english": "forty-six",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_arba_sebat",
+      "word_english": "forty-seven",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_arba_simmint",
+      "word_english": "forty-eight",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_arba_zetegn",
+      "word_english": "forty-nine",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_hamsa_2",
+      "word_english": "fifty",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_hamsa_and",
+      "word_english": "fifty-one",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_hamsa_hulet",
+      "word_english": "fifty-two",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_hamsa_sost",
+      "word_english": "fifty-three",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_hamsa_arat",
+      "word_english": "fifty-four",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_hamsa_ammist",
+      "word_english": "fifty-five",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_hamsa_siddist",
+      "word_english": "fifty-six",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_hamsa_sebat",
+      "word_english": "fifty-seven",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_hamsa_simmint",
+      "word_english": "fifty-eight",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_hamsa_zetegn",
+      "word_english": "fifty-nine",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_silsa_2",
+      "word_english": "sixty",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_silsa_and",
+      "word_english": "sixty-one",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_silsa_hulet",
+      "word_english": "sixty-two",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_silsa_sost",
+      "word_english": "sixty-three",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_silsa_arat",
+      "word_english": "sixty-four",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_silsa_ammist",
+      "word_english": "sixty-five",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_silsa_siddist",
+      "word_english": "sixty-six",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_silsa_sebat",
+      "word_english": "sixty-seven",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_silsa_simmint",
+      "word_english": "sixty-eight",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_silsa_zetegn",
+      "word_english": "sixty-nine",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_seba_2",
+      "word_english": "seventy",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_seba_and",
+      "word_english": "seventy-one",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_seba_hulet",
+      "word_english": "seventy-two",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_seba_sost",
+      "word_english": "seventy-three",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_seba_arat",
+      "word_english": "seventy-four",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_seba_ammist",
+      "word_english": "seventy-five",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_seba_siddist",
+      "word_english": "seventy-six",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_seba_sebat",
+      "word_english": "seventy-seven",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_seba_simmint",
+      "word_english": "seventy-eight",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_seba_zetegn",
+      "word_english": "seventy-nine",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_semanya_2",
+      "word_english": "eighty",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_semanya_and",
+      "word_english": "eighty-one",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_semanya_hulet",
+      "word_english": "eighty-two",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_semanya_sost",
+      "word_english": "eighty-three",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_semanya_arat",
+      "word_english": "eighty-four",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_semanya_ammist",
+      "word_english": "eighty-five",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_semanya_siddist",
+      "word_english": "eighty-six",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_semanya_sebat",
+      "word_english": "eighty-seven",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_semanya_simmint",
+      "word_english": "eighty-eight",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_semanya_zetegn",
+      "word_english": "eighty-nine",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_zetena_2",
+      "word_english": "ninety",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_zetena_and",
+      "word_english": "ninety-one",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_zetena_hulet",
+      "word_english": "ninety-two",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_zetena_sost",
+      "word_english": "ninety-three",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_zetena_arat",
+      "word_english": "ninety-four",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_zetena_ammist",
+      "word_english": "ninety-five",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_zetena_siddist",
+      "word_english": "ninety-six",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_zetena_sebat",
+      "word_english": "ninety-seven",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_zetena_simmint",
+      "word_english": "ninety-eight",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_zetena_zetegn",
+      "word_english": "ninety-nine",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_2",
+      "word_english": "one hundred",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_and",
+      "word_english": "one hundred one",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_hulet",
+      "word_english": "one hundred two",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_sost",
+      "word_english": "one hundred three",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_arat",
+      "word_english": "one hundred four",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_ammist",
+      "word_english": "one hundred five",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_siddist",
+      "word_english": "one hundred six",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_sebat",
+      "word_english": "one hundred seven",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_simmint",
+      "word_english": "one hundred eight",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_zetegn",
+      "word_english": "one hundred nine",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_asir",
+      "word_english": "one hundred ten",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_asra_and",
+      "word_english": "one hundred ten one",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_asra_hulet",
+      "word_english": "one hundred ten two",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_asra_sost",
+      "word_english": "one hundred ten three",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_asra_arat",
+      "word_english": "one hundred ten four",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_asra_ammist",
+      "word_english": "one hundred ten five",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_asra_siddist",
+      "word_english": "one hundred ten six",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_asra_sebat",
+      "word_english": "one hundred ten seven",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_asra_simmint",
+      "word_english": "one hundred ten eight",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_asra_zetegn",
+      "word_english": "one hundred ten nine",
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "vocab_meto_haya",
+      "word_english": "one hundred twenty",
+      "source": "new_recording_needed"
+    }
+  ],
+  "dialogue_line_keys": [
+    {
+      "audio_key": "dial_001_line_000",
+      "dialogue_id": "dial_001",
+      "line_index": 0,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_001_line_001",
+      "dialogue_id": "dial_001",
+      "line_index": 1,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_001_line_002",
+      "dialogue_id": "dial_001",
+      "line_index": 2,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_001_line_003",
+      "dialogue_id": "dial_001",
+      "line_index": 3,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_001_line_004",
+      "dialogue_id": "dial_001",
+      "line_index": 4,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_001_line_005",
+      "dialogue_id": "dial_001",
+      "line_index": 5,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_002_line_000",
+      "dialogue_id": "dial_002",
+      "line_index": 0,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_002_line_001",
+      "dialogue_id": "dial_002",
+      "line_index": 1,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_002_line_002",
+      "dialogue_id": "dial_002",
+      "line_index": 2,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_002_line_003",
+      "dialogue_id": "dial_002",
+      "line_index": 3,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_002_line_004",
+      "dialogue_id": "dial_002",
+      "line_index": 4,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_002_line_005",
+      "dialogue_id": "dial_002",
+      "line_index": 5,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_003_line_000",
+      "dialogue_id": "dial_003",
+      "line_index": 0,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_003_line_001",
+      "dialogue_id": "dial_003",
+      "line_index": 1,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_003_line_002",
+      "dialogue_id": "dial_003",
+      "line_index": 2,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_003_line_003",
+      "dialogue_id": "dial_003",
+      "line_index": 3,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_003_line_004",
+      "dialogue_id": "dial_003",
+      "line_index": 4,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_003_line_005",
+      "dialogue_id": "dial_003",
+      "line_index": 5,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_004_line_000",
+      "dialogue_id": "dial_004",
+      "line_index": 0,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_004_line_001",
+      "dialogue_id": "dial_004",
+      "line_index": 1,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_004_line_002",
+      "dialogue_id": "dial_004",
+      "line_index": 2,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_004_line_003",
+      "dialogue_id": "dial_004",
+      "line_index": 3,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_004_line_004",
+      "dialogue_id": "dial_004",
+      "line_index": 4,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_004_line_005",
+      "dialogue_id": "dial_004",
+      "line_index": 5,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_005_line_000",
+      "dialogue_id": "dial_005",
+      "line_index": 0,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_005_line_001",
+      "dialogue_id": "dial_005",
+      "line_index": 1,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_005_line_002",
+      "dialogue_id": "dial_005",
+      "line_index": 2,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_005_line_003",
+      "dialogue_id": "dial_005",
+      "line_index": 3,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_005_line_004",
+      "dialogue_id": "dial_005",
+      "line_index": 4,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_005_line_005",
+      "dialogue_id": "dial_005",
+      "line_index": 5,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_006_line_000",
+      "dialogue_id": "dial_006",
+      "line_index": 0,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_006_line_001",
+      "dialogue_id": "dial_006",
+      "line_index": 1,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_006_line_002",
+      "dialogue_id": "dial_006",
+      "line_index": 2,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_006_line_003",
+      "dialogue_id": "dial_006",
+      "line_index": 3,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_006_line_004",
+      "dialogue_id": "dial_006",
+      "line_index": 4,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_006_line_005",
+      "dialogue_id": "dial_006",
+      "line_index": 5,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_007_line_000",
+      "dialogue_id": "dial_007",
+      "line_index": 0,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_007_line_001",
+      "dialogue_id": "dial_007",
+      "line_index": 1,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_007_line_002",
+      "dialogue_id": "dial_007",
+      "line_index": 2,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_007_line_003",
+      "dialogue_id": "dial_007",
+      "line_index": 3,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_007_line_004",
+      "dialogue_id": "dial_007",
+      "line_index": 4,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_007_line_005",
+      "dialogue_id": "dial_007",
+      "line_index": 5,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_008_line_000",
+      "dialogue_id": "dial_008",
+      "line_index": 0,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_008_line_001",
+      "dialogue_id": "dial_008",
+      "line_index": 1,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_008_line_002",
+      "dialogue_id": "dial_008",
+      "line_index": 2,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_008_line_003",
+      "dialogue_id": "dial_008",
+      "line_index": 3,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_008_line_004",
+      "dialogue_id": "dial_008",
+      "line_index": 4,
+      "source": "new_recording_needed"
+    },
+    {
+      "audio_key": "dial_008_line_005",
+      "dialogue_id": "dial_008",
+      "line_index": 5,
+      "source": "new_recording_needed"
+    }
+  ],
+  "char_audio_keys": [],
+  "summary": {
+    "total_unique_keys": 298,
+    "keys_source_fsi_clip": 0,
+    "keys_source_new_recording": 298,
+    "keys_source_espeak_fallback": 0
+  }
+}
