@@ -1,73 +1,76 @@
-# React + TypeScript + Vite
+# Amharic Learning PWA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Progressive Web Application (PWA) designed to teach Amharic. This app features interactive modules to learn the Fidel script, vocabulary, grammar rules, and conversational dialogues. It embraces modern web technologies to provide a fully offline capable, fast, and accessible learning experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **HomeScreen Dashboard:** Tracks your learning streak and XP, and dynamically unlocks modules as you progress.
+- **Fidel Module:** Learn the Amharic characters (Fidels) with interactive tracing canvas, audio pronunciation, and a full character chart.
+- **Vocab Module:** Learn essential vocabulary categorized by themes with audio support and example sentences.
+- **Grammar Module:** Interactive grammar lessons with fill-in-the-blank exercises and contextual examples.
+- **Dialogue Module:** Immersive conversations reflecting real-life scenarios with line-by-line audio and translations.
+- **SRS (Spaced Repetition System):** Adaptive flashcard reviews to maintain long-term memory of learned concepts using a custom SM-2 algorithm.
+- **PWA Capabilities:** Fully installable, functions completely offline, custom caching, and responsive design.
+- **Dark Mode & Accessibility:** Supports system-level dark mode, semantic HTML, and correct language tagging for Ethiopic script (`lang="am"`).
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** React 18, Vite
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Routing:** React Router DOM
+- **Storage:** IndexedDB (via `idb-keyval`)
+- **PWA:** vite-plugin-pwa (with Workbox)
 
-## Expanding the ESLint configuration
+## Local Development
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+To run this project locally:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. **Clone the repository:**
+   \`\`\`bash
+   git clone <repository-url>
+   cd "Amharic project"
+   \`\`\`
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2. **Install dependencies:**
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. **Start the development server:**
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+   The app will be available at `http://localhost:5173`.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+4. **Build for production:**
+   \`\`\`bash
+   npm run build
+   \`\`\`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+5. **Preview production build:**
+   \`\`\`bash
+   npm run preview
+   \`\`\`
+   This will serve the production build on `http://localhost:4173` to test PWA features.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Curriculum Overview
+
+The application follows a structured path designed to progressively build literacy:
+1. **Fidel Module:** Introduction to the writing system via visual, auditory, and tracing elements.
+2. **Vocab Module:** Building a core functional lexicon across diverse themes (colors, family, time, food, phrases).
+3. **Grammar Module:** Combining words into grammatically correct patterns.
+4. **Dialogue Module:** Placing vocabulary and morphology into contextual conversations.
+5. **SRS (Flashcards):** Systematically recalling previously learned materials.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Screenshots
+
+*(Placeholder for future screenshots - coming soon!)*
+
+---
+
+*Built with ❤️ for Amharic learners.*

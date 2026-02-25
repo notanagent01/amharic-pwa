@@ -65,7 +65,7 @@ function VocabCard({ word, isQuizMode }: { word: VocabWord, isQuizMode: boolean 
     return (
         <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 p-5 flex flex-col transition-all hover:shadow-md">
             <div className="flex justify-between items-start mb-4">
-                <div className="text-3xl fidel-char text-slate-900 dark:text-slate-100">{word.amharic}</div>
+                <div lang="am" className="text-3xl fidel-char text-slate-900 dark:text-slate-100">{word.amharic}</div>
                 {word.audio_key && (
                     <button
                         onClick={handleAudio}
@@ -84,7 +84,7 @@ function VocabCard({ word, isQuizMode }: { word: VocabWord, isQuizMode: boolean 
 
                     {(word as any).example_amharic && (
                         <div className="mt-3 mb-4 p-3 bg-slate-50 dark:bg-slate-900/50 rounded-lg text-sm">
-                            <div className="fidel-char text-slate-700 dark:text-slate-300 font-medium">{(word as any).example_amharic}</div>
+                            <div lang="am" className="fidel-char text-slate-700 dark:text-slate-300 font-medium">{(word as any).example_amharic}</div>
                             <div className="text-slate-500 mt-1">{(word as any).example_english}</div>
                         </div>
                     )}

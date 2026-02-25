@@ -5,6 +5,7 @@ import { playAudioKey } from '@/lib/audio';
 import { getAllProgress, putProgress } from '@/lib/db';
 import { compareStroke, renderCharacterOutline, renderStrokeHint, clearTracingLayer } from '@/lib/tracing';
 import type { ReferenceStroke, Stroke, StrokeResult } from '@/lib/tracing';
+import ConfettiAnimation from '@/components/ConfettiAnimation';
 
 // --- Placeholder SVGs for group animations ---
 const SVGAnimations: Record<string, React.ReactNode> = {
@@ -210,10 +211,12 @@ function FidelTracing({ char, onBack }: { char: FidelChar, onBack: () => void })
     if (phase === 'result') {
         const avgScore = results.reduce((s, r) => s + r.score, 0) / results.length;
         const isSuccess = avgScore >= 0.65;
+        const showConfetti = avgScore >= 0.90;
 
         return (
             <div className="flex flex-col items-center justify-center min-h-[60vh] p-6 animate-in zoom-in">
-                <div className="text-8xl mb-8 font-bold text-center fidel-char text-slate-900 dark:text-slate-100">{char.display_name}</div>
+                {showConfetti && <ConfettiAnimation />}
+                <div lang="am" className="text-8xl mb-8 font-bold text-center fidel-char text-slate-900 dark:text-slate-100">{char.display_name}</div>
                 <div className={`text-3xl font-bold mb-6 ${isSuccess ? 'text-emerald-500' : 'text-amber-500'}`}>
                     {isSuccess ? 'Mastered!' : 'Keep Practicing'}
                 </div>
@@ -343,7 +346,7 @@ export default function FidelModule() {
                             <div className="flex justify-between items-end gap-1 mt-auto">
                                 {char.orders.map(o => (
                                     <div key={o.order} className="flex flex-col items-center gap-1 group">
-                                        <span className="text-2xl md:text-3xl fidel-char text-slate-900 dark:text-slate-100 group-hover:text-blue-600 transition-colors">
+                                        <span lang="am" className="text-2xl md:text-3xl fidel-char text-slate-900 dark:text-slate-100 group-hover:text-blue-600 transition-colors">
                                             {o.char}
                                         </span>
                                         <span className="text-[10px] text-slate-400 font-medium">

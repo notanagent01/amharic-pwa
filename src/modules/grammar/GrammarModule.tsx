@@ -83,7 +83,7 @@ function ReorderExercise({ exercise, onComplete }: { exercise: Exercise, onCompl
                                 }`}
                         >
                             <div className="flex flex-col">
-                                <span className="text-xl fidel-char text-slate-900 dark:text-slate-100">{word.amharic}</span>
+                                <span lang="am" className="text-xl fidel-char text-slate-900 dark:text-slate-100">{word.amharic}</span>
                                 <span className="text-sm text-slate-500">{word.transliteration}</span>
                             </div>
                             <span className="text-sm font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700/50 px-3 py-1 rounded-lg">
@@ -111,7 +111,7 @@ function FillBlankExercise({ exercise, onComplete }: { exercise: Exercise, onCom
 
     return (
         <div className="flex flex-col gap-6">
-            <div className="text-2xl text-center fidel-char bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl">
+            <div lang="am" className="text-2xl text-center fidel-char bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl">
                 {exercise.sentence_amharic.split('____').map((part: string, i: number, arr: string[]) => (
                     <React.Fragment key={i}>
                         {part}
@@ -158,7 +158,7 @@ function MultipleChoiceExercise({ exercise, onComplete }: { exercise: Exercise, 
                             : 'border-slate-200 dark:border-slate-700 hover:border-blue-300 bg-white dark:bg-slate-800'
                             }`}
                     >
-                        <span className="text-xl fidel-char">{opt}</span>
+                        <span lang="am" className="text-xl fidel-char">{opt}</span>
                     </button>
                 ))}
             </div>
@@ -218,7 +218,7 @@ function MatchPairsExercise({ exercise, onComplete }: { exercise: Exercise, onCo
                                         'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800'
                                     }`}
                             >
-                                <span className="text-2xl fidel-char mb-1">{exercise.pairs[i].left}</span>
+                                <span lang="am" className="text-2xl fidel-char mb-1">{exercise.pairs[i].left}</span>
                                 <span className="text-xs text-slate-500">{exercise.pairs[i].left_gloss}</span>
                             </button>
                         )
@@ -238,7 +238,7 @@ function MatchPairsExercise({ exercise, onComplete }: { exercise: Exercise, onCo
                                         'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800'
                                     }`}
                             >
-                                <span className="text-2xl fidel-char mb-1">{exercise.pairs[i].right}</span>
+                                <span lang="am" className="text-2xl fidel-char mb-1">{exercise.pairs[i].right}</span>
                                 <span className="text-xs text-slate-500">{exercise.pairs[i].right_gloss}</span>
                             </button>
                         )

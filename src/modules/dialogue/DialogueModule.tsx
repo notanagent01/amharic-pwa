@@ -177,7 +177,7 @@ function DialoguePlayer({ dialogue, onComplete }: { dialogue: Dialogue, onComple
                                     <div className="italic text-slate-400 mb-4">You need to reply...</div>
                                 ) : (
                                     <>
-                                        <div className="text-2xl fidel-char text-slate-900 dark:text-slate-100 mb-1">{line.amharic}</div>
+                                        <div lang="am" className="text-2xl fidel-char text-slate-900 dark:text-slate-100 mb-1">{line.amharic}</div>
                                         {showTransliteration && <div className="text-sm font-medium text-slate-500 mb-2">{line.transliteration}</div>}
                                         <div className="text-slate-600 dark:text-slate-400 text-sm">{line.english}</div>
                                     </>
@@ -202,7 +202,7 @@ function DialoguePlayer({ dialogue, onComplete }: { dialogue: Dialogue, onComple
                                                         : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-blue-400'
                                                         }`}
                                                 >
-                                                    <div className="fidel-char text-lg mb-1">{opt.amharic}</div>
+                                                    <div lang="am" className="fidel-char text-lg mb-1">{opt.amharic}</div>
                                                     <div className="text-sm text-slate-500">{opt.english}</div>
                                                 </button>
                                             );

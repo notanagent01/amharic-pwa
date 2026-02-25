@@ -14,6 +14,11 @@ function FlashcardSession({ queue, onComplete }: { queue: { card: Card, state: S
 
     const currentItem = queue[currentIndex];
 
+    // Reset flipped state when card changes
+    useEffect(() => {
+        setIsFlipped(false);
+    }, [currentIndex]);
+
     const handleRate = async (rating: Rating) => {
         const today = getTodayISO();
         const result = applyRating(currentItem.state, rating, today);
@@ -23,13 +28,9 @@ function FlashcardSession({ queue, onComplete }: { queue: { card: Card, state: S
         const newTotalXP = totalXP + result.xp_earned;
         setTotalXP(newTotalXP);
 
-        // In a full SRS implementation, 'again' cards remain in a learning queue for the current session,
-        // but the prompt says: advance to the next card.
-
         if (currentIndex + 1 >= queue.length) {
             onComplete(newTotalXP);
         } else {
-            setIsFlipped(false);
             setCurrentIndex(i => i + 1);
         }
     };
@@ -39,6 +40,25 @@ function FlashcardSession({ queue, onComplete }: { queue: { card: Card, state: S
     const { card } = currentItem;
     const showFidel = card.front_fidel !== null && card.fidel_confidence !== 'pending';
 
+    const renderFrontContent = () => (
+        <>
+            {showFidel ? (
+                <div lang="am" className="text-6xl md:text-7xl fidel-char mb-4 text-slate-900 dark:text-slate-100">{card.front_fidel}</div>
+            ) : (
+                <div className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-slate-100">{card.front_roman}</div>
+            )}
+
+            {card.audio_key && (
+                <button
+                    onClick={() => playAudioKey(card.audio_key!)}
+                    className="mt-4 p-3 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:text-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors"
+                >
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                </button>
+            )}
+        </>
+    );
+
     return (
         <div className="flex flex-col items-center justify-center p-4 min-h-[60vh] animate-in fade-in zoom-in-95">
             <div className="w-full max-w-sm flex items-center justify-between mb-4">
@@ -46,66 +66,85 @@ function FlashcardSession({ queue, onComplete }: { queue: { card: Card, state: S
                 <span className="text-sm font-medium text-slate-500">{currentIndex + 1} / {queue.length}</span>
             </div>
 
-            <div className="w-full max-w-sm bg-white dark:bg-slate-800 rounded-2xl shadow-xl overflow-hidden min-h-[300px] flex flex-col relative border border-slate-100 dark:border-slate-700">
-
-                {/* Progress bar */}
-                <div className="h-1.5 bg-slate-100 dark:bg-slate-700 w-full absolute top-0 left-0">
+            <div className="w-full max-w-sm relative perspective-[1000px]" style={{ perspective: '1000px', minHeight: '400px' }}>
+                <div
+                    className="w-full h-full relative"
+                    style={{
+                        transformStyle: 'preserve-3d',
+                        transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+                        transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
+                    }}
+                >
+                    {/* Front Face */}
                     <div
-                        className="h-full bg-blue-500 transition-all duration-300"
-                        style={{ width: `${((currentIndex) / queue.length) * 100}%` }}
-                    />
-                </div>
-
-                <div className="flex-1 flex flex-col p-8 items-center justify-center text-center">
-                    {showFidel ? (
-                        <div className="text-6xl md:text-7xl fidel-char mb-4 text-slate-900 dark:text-slate-100">{card.front_fidel}</div>
-                    ) : (
-                        <div className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-slate-100">{card.front_roman}</div>
-                    )}
-
-                    {card.audio_key && (
-                        <button
-                            onClick={() => playAudioKey(card.audio_key!)}
-                            className="mt-4 p-3 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:text-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors"
-                        >
-                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-                        </button>
-                    )}
-
-                    {isFlipped && (
-                        <div className="w-full mt-8 pt-6 border-t border-slate-200 dark:border-slate-700 animate-in slide-in-from-top-4">
-                            <div className="text-xl font-medium text-slate-800 dark:text-slate-200 mb-2">{card.back}</div>
-                            {showFidel && (
-                                <div className="text-sm tracking-wide text-slate-500 dark:text-slate-400 mb-4">{card.front_roman}</div>
-                            )}
-
-                            {(card as any).example_amharic && (
-                                <div className="mt-4 bg-slate-50 dark:bg-slate-900/50 p-4 rounded-xl text-left">
-                                    <div className="fidel-char text-lg text-slate-700 dark:text-slate-300">{(card as any).example_amharic}</div>
-                                    <div className="text-xs text-slate-500 mt-1">{(card as any).example_transliteration}</div>
-                                    <div className="text-sm font-medium text-slate-600 dark:text-slate-400 mt-2">{(card as any).example_english}</div>
-                                </div>
-                            )}
+                        className="absolute inset-0 bg-white dark:bg-slate-800 rounded-2xl shadow-xl overflow-hidden flex flex-col border border-slate-100 dark:border-slate-700"
+                        style={{ backfaceVisibility: 'hidden' }}
+                    >
+                        {/* Progress bar */}
+                        <div className="h-1.5 bg-slate-100 dark:bg-slate-700 w-full absolute top-0 left-0">
+                            <div
+                                className="h-full bg-blue-500 transition-all duration-300"
+                                style={{ width: `${((currentIndex) / queue.length) * 100}%` }}
+                            />
                         </div>
-                    )}
-                </div>
 
-                <div className="p-4 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
-                    {!isFlipped ? (
-                        <button
-                            onClick={() => setIsFlipped(true)}
-                            className="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg transition-colors shadow-lg shadow-blue-500/20"
-                        >
-                            Show Answer
-                        </button>
-                    ) : (
-                        <div className="grid grid-cols-4 gap-2">
-                            <button onClick={() => handleRate('again')} className="py-3 rounded-lg font-bold bg-red-100 text-red-700 hover:bg-red-200 dark:bg-red-900/30 dark:text-red-400 transition-colors">Again</button>
-                            <button onClick={() => handleRate('hard')} className="py-3 rounded-lg font-bold bg-orange-100 text-orange-700 hover:bg-orange-200 dark:bg-orange-900/30 dark:text-orange-400 transition-colors">Hard</button>
-                            <button onClick={() => handleRate('good')} className="py-3 rounded-lg font-bold bg-emerald-100 text-emerald-700 hover:bg-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-400 transition-colors">Good</button>
-                            <button onClick={() => handleRate('easy')} className="py-3 rounded-lg font-bold bg-blue-100 text-blue-700 hover:bg-blue-200 dark:bg-blue-900/30 dark:text-blue-400 transition-colors">Easy</button>
+                        <div className="flex-1 flex flex-col p-8 items-center justify-center text-center relative z-10 overflow-y-auto">
+                            {renderFrontContent()}
                         </div>
-                    )}
+
+                        <div className="p-4 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 relative z-10">
+                            <button
+                                onClick={() => setIsFlipped(true)}
+                                className="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg transition-colors shadow-lg shadow-blue-500/20"
+                            >
+                                Show Answer
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Back Face */}
+                    <div
+                        className="absolute inset-0 bg-white dark:bg-slate-800 rounded-2xl shadow-xl overflow-hidden flex flex-col border border-slate-100 dark:border-slate-700"
+                        style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+                    >
+                        {/* Progress bar */}
+                        <div className="h-1.5 bg-slate-100 dark:bg-slate-700 w-full absolute top-0 left-0 z-20">
+                            <div
+                                className="h-full bg-blue-500 transition-all duration-300"
+                                style={{ width: `${((currentIndex) / queue.length) * 100}%` }}
+                            />
+                        </div>
+
+                        <div className="flex-1 flex flex-col p-8 items-center justify-start text-center relative z-10 overflow-y-auto mt-2">
+                            <div className="scale-75 origin-top mb-2">
+                                {renderFrontContent()}
+                            </div>
+
+                            <div className="w-full pt-4 border-t border-slate-200 dark:border-slate-700">
+                                <div className="text-xl font-medium text-slate-800 dark:text-slate-200 mb-2">{card.back}</div>
+                                {showFidel && (
+                                    <div className="text-sm tracking-wide text-slate-500 dark:text-slate-400 mb-4">{card.front_roman}</div>
+                                )}
+
+                                {(card as any).example_amharic && (
+                                    <div className="mt-4 bg-slate-50 dark:bg-slate-900/50 p-4 rounded-xl text-left">
+                                        <div lang="am" className="fidel-char text-lg text-slate-700 dark:text-slate-300">{(card as any).example_amharic}</div>
+                                        <div className="text-xs text-slate-500 mt-1">{(card as any).example_transliteration}</div>
+                                        <div className="text-sm font-medium text-slate-600 dark:text-slate-400 mt-2">{(card as any).example_english}</div>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+
+                        <div className="p-4 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 relative z-10">
+                            <div className="grid grid-cols-4 gap-2">
+                                <button onClick={() => handleRate('again')} className="py-3 rounded-lg font-bold bg-red-100 text-red-700 hover:bg-red-200 dark:bg-red-900/30 dark:text-red-400 transition-colors px-1 text-sm sm:text-base">Again</button>
+                                <button onClick={() => handleRate('hard')} className="py-3 rounded-lg font-bold bg-orange-100 text-orange-700 hover:bg-orange-200 dark:bg-orange-900/30 dark:text-orange-400 transition-colors px-1 text-sm sm:text-base">Hard</button>
+                                <button onClick={() => handleRate('good')} className="py-3 rounded-lg font-bold bg-emerald-100 text-emerald-700 hover:bg-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-400 transition-colors px-1 text-sm sm:text-base">Good</button>
+                                <button onClick={() => handleRate('easy')} className="py-3 rounded-lg font-bold bg-blue-100 text-blue-700 hover:bg-blue-200 dark:bg-blue-900/30 dark:text-blue-400 transition-colors px-1 text-sm sm:text-base">Easy</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

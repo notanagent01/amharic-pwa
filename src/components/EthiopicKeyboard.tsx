@@ -68,7 +68,7 @@ export default function EthiopicKeyboard({
             <button
               key={consonant.base_char}
               type="button"
-              aria-label={`Select consonant ${consonant.display_name}`}
+              aria-label={`${consonant.base_char} — consonant ${consonant.romanization}`}
               onClick={() => handleConsonantPress(consonant)}
               disabled={disabled}
               className={[
@@ -81,8 +81,8 @@ export default function EthiopicKeyboard({
                 disabled ? 'opacity-60 cursor-not-allowed' : ''
               ].join(' ')}
             >
-              <div className="fidel-char text-2xl leading-none">{consonant.base_char}</div>
-              <div className="text-xs text-gray-300 mt-1">{consonant.romanization}</div>
+              <div lang="am" className="fidel-char text-2xl leading-none">{consonant.base_char}</div>
+              <div aria-hidden="true" className="text-xs text-gray-300 mt-1">{consonant.romanization}</div>
             </button>
           )
         })}
@@ -100,7 +100,7 @@ export default function EthiopicKeyboard({
               <button
                 key={order}
                 type="button"
-                aria-label={`Input vowel order ${order} (${sound}) for ${selectedConsonant.display_name}`}
+                aria-label={`Order ${order} — ${sound}`}
                 onClick={() => handleVowelPress(order)}
                 disabled={disabled}
                 className={[
@@ -110,9 +110,9 @@ export default function EthiopicKeyboard({
                   disabled ? 'opacity-60 cursor-not-allowed' : ''
                 ].join(' ')}
               >
-                <div className="text-xs text-gray-400">{order}</div>
-                <div className="fidel-char text-xl leading-none">{combinedChar}</div>
-                <div className="text-xs text-gray-300">{sound}</div>
+                <div aria-hidden="true" className="text-xs text-gray-400">{order}</div>
+                <div lang="am" className="fidel-char text-xl leading-none">{combinedChar}</div>
+                <div aria-hidden="true" className="text-xs text-gray-300">{sound}</div>
               </button>
             )
           })}
